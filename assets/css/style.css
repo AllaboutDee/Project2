@@ -60,3 +60,52 @@ body {
     flex: 0 0 auto; /* Prevent H1 from resizing */
 }
 
+----------------------------------------------
+/* DJ Set Layout */
+.dj-set {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px;
+}
+
+/* Decks */
+.deck, .mixer {
+    background: linear-gradient(to bottom, #fff, #eee);
+    color: #900;
+    padding: 20px;
+    border: 5px solid #900;
+    box-shadow: 0 0 10px #000;
+    flex: 1;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.mixer {
+    flex: 0.3;
+}
+
+/* Platter Styling */
+.platter {
+    width: 275px;
+    height: 275px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, silver, gray);
+    border: 12px solid #900;
+    box-shadow: 0 0 15px #000 inset;
+    position: relative;
+}
+
+.platter-center {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #900, #600);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5px #000;
+}

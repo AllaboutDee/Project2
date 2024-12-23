@@ -8,36 +8,362 @@
     <script src="https://unpkg.com/wavesurfer.js"></script>
 </head>
 <body>
+  <!-----Whole Body div------->
     <div id="wholeBody">
-        <!-- Top-Right Switch Theme and Customize Color buttons -->
-        <div class="top-right-controls">
+       <!-- Top-Right Switch Theme and Customize Color buttons -->
+        <div class="theme-controls">
             <button id="switchTheme" class="button">Switch Theme</button>
             <button id="customizeColour" class="button">Customize Colour</button>
         </div>
-        <!-- Full-Width Header -->
-        <header>
-            <div class="header-container">
-                <div class="header-waveforms">
-                    <!-- Waveform for Deck A -->
-                    <div class="waveform-header" id="waveformHeaderA"></div>
-                    <!-- Header Title -->
-                    <h1>DEE J PRO : <br> Interactive DJ Mixer</h1>
-                    <!-- Waveform for Deck B -->
-                    <div class="waveform-header" id="waveformHeaderB"></div>
+<!-------End of switch Theme-------->
+<!------ Full-Width Header --------->
+<header>
+    <div class="header-container">
+        <!-- Waveform for Deck A -->
+        <div class="waveform-header" id="waveformHeaderA"></div>
+        <!-- Header Title -->
+        <h1>DEE J PRO : <br> Interactive DJ Mixer</h1>
+        <!-- Waveform for Deck B -->
+        <div class="waveform-header" id="waveformHeaderB"></div>
+    </div>
+</header>
+<!---------End of Header------------>
+<!----------Main div for the Dj set (Deck A, Mixer, Deck B)------------->
+<!------div for Deck A------>
+      <div class="deck" id="deckA">
+        <h2>Deck A</h2>
+        <div class="waveform" id="waveformA"></div>
+        <div class="deck-row">
+          
+<!----------Div container for Pitch Control and Touchstrip---------------------------->
+<div class="touchstrip-pitch-controls">
+    <!-- Pitch Control -->
+    <div class="pitch-control" id="pitchControlA">
+        <button id="pitchMinusA" class="pitch-button">-</button>
+        <button id="pitchPlusA" class="pitch-button">+</button>
+    </div>
+
+    <!-- Touchstrip -->
+    <div class="touchstrip" id="touchstripA">
+        <!-- Row 1 -->
+        <div class="touchstrip-row">
+            <div class="touchstrip-bar" id="touchstripBarA"></div>
+            <button id="beatsButtonA" class="beats-button">BEATS</button>
+        </div>
+        <!-- Row 2 -->
+        <div class="fx-buttons-row">
+            <button id="fx1ButtonA" class="fx-button">FX1</button>
+            <button id="fx2ButtonA" class="fx-button">FX2</button>
+            <button id="fx3ButtonA" class="fx-button">FX3</button>
+            <button id="tapButtonA" class="fx-button">TAP</button>
+        </div>
+    </div>
+</div>
+
+
+<!------------- Div for Tempofader, Platter, Wheel Coontrols--------------------------->
+            <div class="deck-controls-flex">
+                <!-- Tempo Fader for Deck A -->
+                <div class="tempo-fader" id="tempoFaderA">
+                    <label for="tempoA">Tempo</label>
+                    <input type="range" id="tempoA" min="50" max="150" value="100">
+                </div>
+
+                <!-- Platter for Deck A -->
+                <div class="platter" id="platterA">
+                    <div class="platter-center"></div>
+                </div>
+
+                <!-- Wheel Controls Section -->
+                <div class="wheel-controls-container">
+                    <button id="wheelScratchA" class="wheel-button">Wheel Scratch</button>
+                    <button id="wheelNudgeA" class="wheel-button">Wheel Nudge</button>
                 </div>
             </div>
-        </header>
+ <!---------------Performance Pad and Control Buttons Div---------------------------->
+            <div class="performance-pad-container">
+              <!-- Performance Pad -->
+                  <div class="performance-pad">
+                      <!-- Row 1 -->
+                      <button id="manualLoopInA" class="button metallic-red">Manual Loop IN</button>
+                      <button id="manualLoopOutA" class="button metallic-red">Manual Loop OUT</button>
+                      <button id="autoLoopInA" class="button metallic-red">Auto Loop IN</button>
+                      <button id="autoLoopOutA" class="button metallic-red">Auto Loop OUT</button>
 
+                      <!-- Row 2 -->
+                      <button id="halfSpeedA" class="button metallic-red">0.5x Speed</button>
+                      <button id="doubleSpeedA" class="button metallic-red">x2 Speed</button>
+                      <button id="sampler1A" class="button metallic-red">Sampler 1</button>
+                      <button id="sampler2A" class="button metallic-red">Sampler 2</button>
 
+                      <!-- Row 3 -->
+                      <button id="cue1A" class="button metallic-red">CUE 1</button>
+                      <button id="cue2A" class="button metallic-red">CUE 2</button>
+                      <button id="cue3A" class="button metallic-red">CUE 3</button>
+                      <button id="cue4A" class="button metallic-red">CUE 4</button>
+                  </div>  
+    
 
+                  <!-- Control Buttons -->
+                  <div class="control-buttons">
+                      <button id="syncButtonA" class="button metallic-red">Sync</button>
+                      <button id="cueButtonA" class="button metallic-red">Cue</button>
+                      <button id="playButtonA" class="button metallic-red">Play/Pause</button>
+                  </div>
+        </div>   
+                  
+   
+        </div>
+      </div>
+       
+<!--------end of Deck A div-------->
+<!--------Div for Mixer------->
+        <div class="Mixer" id="mixer-section"> 
+<!-----section for Equalizers, Browser, Gain, Cue Mix, Cue Gain--------------->
+          <div class="eq-gains">
+            <!-- Equalizer Controls for Deck A -->
+                    <div class="equalizer" id="equalizerA">
+                        <label>Bass: <input type="range" id="bassA" min="-10" max="10" value="0"></label>
+                        <label>Mid: <input type="range" id="midA" min="-10" max="10" value="0"></label>
+                        <label>Treble: <input type="range" id="trebleA" min="-10" max="10" value="0"></label>
+                    </div>
+             <!-- Master Output and Cue Controls -->
+            <div class="master-cue-controls">
+             <!-- Master Gain -->
+                    <div class="control-group" id="masterGainControl">
+                        <label for="masterGain">Master Gain:</label>
+                        <input type="range" id="masterGain" min="0" max="2" step="0.01" value="1">
+                    </div>
 
+                    <!-- Cue Mix -->
+                    <div class="control-group" id="cueMixControl">
+                        <label for="cueMix">Cue Mix:</label>
+                        <input type="range" id="cueMix" min="0" max="1" step="0.01" value="0.5">
+                    </div>
 
+                    <!-- Cue Gain -->
+                    <div class="control-group" id="cueGainControl">
+                        <label for="cueGain">Cue Gain:</label>
+                        <input type="range" id="cueGain" min="0" max="2" step="0.01" value="1">
+                    </div>
+            </div>
+    
+            </div>
 
+            
+            
+            <!------ Equalizer Controls for Deck B--------->
+                    <div class="equalizer" id="equalizerB">
+                        <label>Bass: <input type="range" id="bassB" min="-10" max="10" value="0"></label>
+                        <label>Mid: <input type="range" id="midB" min="-10" max="10" value="0"></label>
+                        <label>Treble: <input type="range" id="trebleB" min="-10" max="10" value="0"></label>
+                    </div>      
+        </div> <!---end of eq-mains div--->
+        
+        <div class="filters">
+          <!-- HP/LP Filter for Deck A -->
+            <div class="filter-group" id="filterDeckA">
+                <h4>Deck A Filter</h4>
+                <label for="filterFreqA">Frequency:</label>
+                <input type="range" id="filterFreqA" min="20" max="20000" step="1" value="1000">
+                <label id="filterFreqLabelA">Frequency: 1000 Hz</label>
+            </div>
 
+            <!-- HP/LP Filter for Deck B -->
+            <div class="filter-group" id="filterDeckB">
+                <h4>Deck B Filter</h4>
+                <label for="filterFreqB">Frequency:</label>
+                <input type="range" id="filterFreqB" min="20" max="20000" step="1" value="1000">
+                <label id="filterFreqLabelB">Frequency: 1000 Hz</label>
+            </div>    
+          
+             <!-- New Div Container for Headphone, MIC, Headphone buttons -->
+            <div class="audio-controls">
+                <button id="headphoneA" class="button audio-button">Headphone (Deck A)</button>
+                <button id="mic" class="button audio-button">MIC</button>
+                <button id="headphoneB" class="button audio-button">Headphone (Deck B)</button>
+            </div>
+          
+          <!-- New Div Container for Record, Save Mix, Load Mix buttons -->
+            <div class="mix-controls">
+            <button id="recordMix" class="button mix-button">RECORD</button>
+            <button id="saveMix" class="button mix-button">SAVE MIX</button>
+            <button id="loadMix" class="button mix-button">LOAD MIX</button>
+           
+          <!--------Channel Fader Container------------------>
+               <div class="channel-faders-container">
+            <div class="channel-fader">
+                <label for="channelFaderA">Channel A Volume</label>
+                <input type="range" id="channelFaderA" min="0" max="1" step="0.01" value="0.5" class="vertical-slider">
+            </div>
+            <div class="master-light-placeholder">
+                <div class="light-display">Master Light</div>
+            </div>
+            <div class="channel-fader">
+                <label for="channelFaderB">Channel B Volume</label>
+                <input type="range" id="channelFaderB" min="0" max="1" step="0.01" value="0.5" class="vertical-slider">
+            </div>
+        </div>
+              
+            <!-------------------Crossfader------------------>
+              <div class="crossfader-container">
+            <label for="crossfader">Crossfader:</label>
+            <input type="range" id="crossfader" min="0" max="100" value="50" class="horizontal-slider">
+        </div>
+             <!-- Music Selection Section -->
+        <div class="music-selection">
+            <!-- Deck A Music Selection -->
+            <div class="music-control">
+                <h3>Deck A</h3>
+                <select id="selectTrackA" class="track-select">
+                    <option value="track1">Track 1</option>
+                    <option value="track2">Track 2</option>
+                    <option value="track3">Track 3</option>
+                    <option value="track4">Track 4</option>
+                    <option value="track5">Track 5</option>
+                </select>
+                <input type="file" id="fileA" accept="audio/*" class="file-input">
+            </div>
 
+            <!-- Deck B Music Selection -->
+            <div class="music-control">
+                <h3>Deck B</h3>
+                <select id="selectTrackB" class="track-select">
+                    <option value="track1">Track 1</option>
+                    <option value="track2">Track 2</option>
+                    <option value="track3">Track 3</option>
+                    <option value="track4">Track 4</option>
+                    <option value="track5">Track 5</option>
+                </select>
+                <input type="file" id="fileB" accept="audio/*" class="file-input">
+            </div>
+              </div>  
+          
+        </div> <!-----end of Mixer div----------->
+      
+<!--------end of Mixer div-------->
+<!--------Div for Deck B ---------> 
+          
+<!------div for Deck B------>
+      <div class="deck" id="deckB">
+        <h2>Deck B</h2>
+        <div class="waveform" id="waveformB"></div>
+        <div class="deck-row">
+          
+<!----------Div container for Pitch Control and Touchstrip---------------------------->
+<div class="touchstrip-pitch-controls">
+   
+    <!-- Touchstrip -->
+    <div class="touchstrip" id="touchstripB">
+        <!-- Row 1 -->
+        <div class="touchstrip-row">
+            <div class="touchstrip-bar" id="touchstripBarB"></div>
+            <button id="beatsButtonB" class="beats-button">BEATS</button>
+        </div>
+        <!-- Row 2 -->
+        <div class="fx-buttons-row">
+            <button id="fx1ButtonB" class="fx-button">FX1</button>
+            <button id="fx2ButtonB" class="fx-button">FX2</button>
+            <button id="fx3ButtonB" class="fx-button">FX3</button>
+            <button id="tapButtonB" class="fx-button">TAP</button>
+        </div>
+      
+     <!-- Pitch Control -->
+    <div class="pitch-control" id="pitchControlB">
+        <button id="pitchMinusB" class="pitch-button">-</button>
+        <button id="pitchPlusB" class="pitch-button">+</button>
+    </div>
 
     </div>
+</div>
+
+
+<!------------- Div for Tempofader, Platter, Wheel Coontrols--------------------------->
+            <div class="deck-controls-flex">
+                <!-- Wheel Controls Section -->
+                <div class="wheel-controls-container">
+                    <button id="wheelScratchB" class="wheel-button">Wheel Scratch</button>
+                    <button id="wheelNudgeB" class="wheel-button">Wheel Nudge</button>
+                </div>
+
+                <!-- Platter for Deck B -->
+                <div class="platter" id="platterB">
+                    <div class="platter-center"></div>
+                </div>
+
+                <!-- Tempo Fader for Deck B -->
+                <div class="tempo-fader" id="tempoFaderB">
+                    <label for="tempoB">Tempo</label>
+                    <input type="range" id="tempoB" min="50" max="150" value="100">
+                </div>
+            </div>
+ <!---------------Performance Pad and Control Buttons Div---------------------------->
+            <div class="performance-pad-container">
+              <!-- Performance Pad -->
+                  <!-- Control Buttons -->
+                  <div class="control-buttons">
+                      <button id="syncButtonB" class="button metallic-red">Sync</button>
+                      <button id="cueButtonB" class="button metallic-red">Cue</button>
+                      <button id="playButtonB" class="button metallic-red">Play/Pause</button>
+                  </div>
+              
+                  <div class="performance-pad">
+                      <!-- Row 1 -->
+                      <button id="manualLoopInB" class="button metallic-red">Manual Loop IN</button>
+                      <button id="manualLoopOutB" class="button metallic-red">Manual Loop OUT</button>
+                      <button id="autoLoopInB" class="button metallic-red">Auto Loop IN</button>
+                      <button id="autoLoopOutB" class="button metallic-red">Auto Loop OUT</button>
+
+                      <!-- Row 2 -->
+                      <button id="halfSpeedB" class="button metallic-red">0.5x Speed</button>
+                      <button id="doubleSpeedB" class="button metallic-red">x2 Speed</button>
+                      <button id="sampler1B" class="button metallic-red">Sampler 1</button>
+                      <button id="sampler2B" class="button metallic-red">Sampler 2</button>
+
+                      <!-- Row 3 -->
+                      <button id="cue1B" class="button metallic-red">CUE 1</button>
+                      <button id="cue2B" class="button metallic-red">CUE 2</button>
+                      <button id="cue3B" class="button metallic-red">CUE 3</button>
+                      <button id="cue4B" class="button metallic-red">CUE 4</button>
+                  </div>  
+                  
+        </div>   
+                  
+   
+        </div>
+             
+      
+<!----------end of Deck B div------>
+
+        
+<!------------MUSIC and Sampler BROWSER SECTION---------------->
+        
+<!-------div for SamplerA music----------------->
+        <div>
+          <div class="sampler-display" id="samplerDisplayA"> </div>
+          
+          <div class="music-display" id="musicDisplayA"> </div>
+          
+          <div class="music-display" id="musicDisplayB"> </div>
+          
+          <div class="sampler-display" id="samplerDisplay"> </div>
+        
+        </div>
+
+          </div> 
+        
+  </div>
+      </div> 
 
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
