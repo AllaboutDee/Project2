@@ -12,6 +12,22 @@ body {
     width: 100%;
 }
 
+.whole-body-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 3rem; /* Prevent overlap with theme controls */
+}
+
+
+/* Metallic Red Buttons */
+.metallic-red {
+    border: 2px solid #900;
+    background: linear-gradient(to bottom, #f00, #900);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+}
+
 /* Theme Controls */
 .theme-controls {
     display: flex;
@@ -19,6 +35,14 @@ body {
     padding: 10px;
     gap: 10px;
 }
+.theme-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10; /* Ensure it appears above other elements */
+  margin: 1rem;
+}
+
 
 .theme-controls button {
     padding: 8px 12px;
@@ -28,27 +52,27 @@ body {
     color: white;
     cursor: pointer;
     box-shadow: 0 0 5px #000;
+    width: 100px;
 }
 
 /* Header Container */
+
 .header-container {
     display: flex;
+    flex-direction: column;
+     padding: 1rem;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
     border: 5px solid #900;
     border-radius: 10px;
     box-shadow: 0 0 10px #000;
-    background: linear-gradient(to bottom, #222, #444);
+    background: linear-gradient(to bottom, #222, #444);/* very dark grey, medium-dark gray*/
 }
-
-/* Waveform Styling */
-.waveform-header {
-    width: 550px; /* Ensure both waveforms have equal width */
-    height: 100px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 /* Header H1 Styling */
@@ -60,29 +84,390 @@ body {
     flex: 0 0 auto; /* Prevent H1 from resizing */
 }
 
-----------------------------------------------
-/* DJ Set Layout */
+/* Waveform Styling */
+.waveform-header {
+    width: 550px; /* Ensure both waveforms have equal width */
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Add error-handling logic to manage cases where files are missing or unsupported */
+waveformHeaderA.on('error', (error) => {
+    console.error('Error loading audio for Deck A:', error);
+});
+
+waveformHeaderB.on('error', (error) => {
+    console.error('Error loading audio for Deck B:', error);
+});
+
+.dj-set {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .dj-set {
+    grid-template-columns: 1fr 1fr 1fr; /* Deck A, Mixer, Deck B */
+  }
+}
+
+.deck, .mixer {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.waveform {
+  width: 100%;
+  height: 100px;
+}
+
+/* Parent container styling */
+.touchstrip-pitch-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 20px; /* Add space between pitch control and touchstrip */
+}
+
+.pitch-control,
+.touchstrip {
+    flex: 1; /* Allow both to take up available space */
+}
+
+.pitch-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    gap: 5px;
+}
+
+
+.pitch-control button {
+    width: 20%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#pitchMinusB, #pitchPlusB {
+    display: inline-block; /* Ensure buttons are visible */
+}
+
+
+/* Touchstrip styling */
+.touchstrip {
+    display: flex;
+    flex-direction: column; /* Ensures rows are stacked vertically */
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%; /* 70-80% width of the parent container */
+    gap: 10px; /* Spacing between rows */
+}
+
+.touchstrip-row {
+    display: flex; /* Ensures horizontal alignment */
+    justify-content: space-between; /* Spacing between touchstrip and BEATS button */
+    align-items: center;
+    width: 100%;
+}
+
+/* Touchstrip bar styling */
+.touchstrip-bar {
+    background: #333; /* Example background for touchstrip */
+    height: 10px; /* Height of the touchstrip bar */
+    flex: 1; /* Takes up the remaining space */
+    border-radius: 5px;
+    margin-right: 10px; /* Adds spacing between touchstrip bar and BEATS button */
+    width: 100%;
+}
+
+/* BEATS button styling */
+#beatsButtonA {
+    flex-shrink: 0; /* Prevent shrinking */
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+/* BEATS button styling */
+#beatsButtonB {
+    flex-shrink: 0; /* Prevent shrinking */
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+/* FX buttons row styling */
+.fx-buttons-row {
+    display: flex; /* Horizontal alignment */
+    justify-content: space-between; /* Distributes buttons evenly */
+    gap: 5px; /* Adds space between buttons */
+    width: 100%;
+}
+
+.fx-buttons-row button {
+    flex: 1; /* Equal button width */
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* TAP button specific styling */
+#tapButtonA {
+    flex-shrink: 0; /* Prevent shrinking for the TAP button */
+}
+
+/* TAP button specific styling */
+#tapButtonB {
+    flex-shrink: 0; /* Prevent shrinking for the TAP button */
+}
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+    .touchstrip-pitch-controls {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+
+    .pitch-control,
+    .touchstrip {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .touchstrip-row {
+        flex-direction: column; /* Stack touchstrip bar and BEATS button */
+        align-items: center;
+    }
+
+    .touchstrip-bar {
+        margin-right: 0;
+        width: 0%; /* Reduce width for small screens */
+    }
+
+    .fx-buttons-row {
+        flex-wrap: wrap; /* Allow buttons to wrap */
+        gap: 10px;
+    }
+
+    .fx-buttons-row button {
+        width: calc(50% - 5px); /* Two buttons per row */
+    }
+}
+
+
+.touchstrip-bar {
+  height: 50px;
+  width: 600px;
+  background: linear-gradient(to right, #f00, #000);
+}
+
+* Deck-Specific Adjustments */
+#pitchControlA {
+    justify-content: flex-start; /* Move pitch buttons to the left for Deck A */
+}
+
+#pitchControlB {
+    justify-content: flex-end; /* Move pitch buttons to the right for Deck B */
+}
+
+
+
+
+/* DJ Set Container */
 .dj-set {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+    gap: 10px; /* Add spacing between Decks and Mixer */
+    width: 100%;
     padding: 20px;
-    gap: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
-/* Decks */
-.deck, .mixer {
+/* Deck A and Deck B Styling */
+.deck {
     background: linear-gradient(to bottom, #fff, #eee);
     color: #900;
     padding: 20px;
     border: 5px solid #900;
     box-shadow: 0 0 10px #000;
-    flex: 1;
     text-align: center;
     border-radius: 20px;
+    flex-basis: 35%; /* 35% of the dj-set container */
+    flex-grow: 0;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
+/* Mixer Styling */
 .mixer {
-    flex: 0.3;
+    background: linear-gradient(to bottom, #fff, #eee);
+    color: #900;
+    padding: 20px;
+    border: 5px solid #900;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+    border-radius: 20px;
+    flex-basis: 30%; /* 30% of the dj-set container */
+    flex-grow: 0;
+    flex-shrink: 0; /* Prevent shrinking */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Equalizer Gains Container */
+#eq-gains-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20%; /* 20% of Mixer section height */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Individual Equalizer or Master Cue Divs */
+.equalizer, .master-cue-controls {
+  display: flex;
+  flex-direction: column; /* Stack the controls vertically */
+  justify-content: space-around;
+  align-items: center;
+  flex: 1; /* Equal width for all three columns */
+  margin: 0 10px;
+  height: 100%; /* Match the height of eq-gains-container */
+  text-align: center;
+}
+
+/* Styling for Strip Controls */
+.strip-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%; /* Take full width of the parent */
+  height: 30%; /* Adjust for spacing between rows */
+  margin: 5px 0;
+  background: linear-gradient(to bottom, #aa0000, #800000); /* Metallic red gradient */
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); /* Depth effect */
+  font-size: 0.9rem; /* Responsive font size */
+}
+
+/* Responsive Design */
+
+/* Mobile-first */
+#eq-gains-container {
+  flex-direction: column; /* Stack sections vertically for mobile */
+}
+
+.equalizer, .master-cue-controls {
+  width: auto; /* Adapt width dynamically */
+}
+
+/* Tablet (e.g., iPads) */
+@media (min-width: 768px) {
+  #eq-gains-container {
+    flex-direction: row; /* Horizontal layout for tablet and larger */
+  }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 1024px) {
+  .strip-control {
+    font-size: 1rem; /* Slightly larger font for bigger screens */
+    height: 33%; /* Adjust height for better alignment */
+  }
+}
+
+
+
+/* Music Sampler Display */
+.music-sampler-display {
+    margin-top: 20px; /* Add spacing from the DJ set */
+    background: linear-gradient(to bottom, #fff, #eee);
+    color: #900;
+    padding: 20px;
+    border: 5px solid #900;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%; /* Full width of parent container */
+    flex: 1;
+}
+
+/* General Layout for Deck Controls */
+.deck-controls-flex {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+/* Tempo Fader Styling */
+.tempo-fader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #900;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    padding: 10px;
+    height: 250px;
+    width: 8%;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f00, #900);
+    color: white; 
+}
+
+
+.tempo-fader input[type="range"] {
+    -webkit-appearance: slider-vertical;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, #c00, #800);
+    outline: none;
+    border-radius: 5px;
+}
+
+
+.tempo-fader label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+  .tempo-container .tempo-fader input[type="range"] {
+    -webkit-appearance: slider-vertical;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, #c00, #800);
+    outline: none;
+    border-radius: 5px;
+}
+
+/* Platter Styling */
+.platter {
+  flex: 1 1 70%; /* 70% of the width */
+  max-width: 275px;
+  max-height: 275px;
+  margin: auto;
 }
 
 /* Platter Styling */
@@ -109,3 +494,433 @@ body {
     transform: translate(-50%, -50%);
     box-shadow: 0 0 5px #000;
 }
+
+
+/* Wheel Controls Container */
+.wheel-controls-flex {
+    flex: 1 1 15%; /* 15% of the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+/* Wheel Buttons */
+.wheel-controls-container .metallic-red {
+  width: 60%; /* Adjusted width */
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Buttons for Wheel Controls */
+.wheel-controls-flex .metallic-red {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #900;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #f00, #900);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.wheel-controls-container .button:hover {
+    background: linear-gradient(to bottom, #900, #600);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .deck-controls-flex {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    height: auto;
+  }
+
+  .platter {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .tempo-fader,
+  .wheel-controls-container {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .deck-controls-flex {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .platter {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+/* Mixer Section */
+.mixer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Styling for the audio controls container */
+.audio-controls {
+    display: flex;
+    justify-content: center; /* Align buttons in the center */
+    gap: 15px; /* Space between buttons */
+    margin: 20px 0; /* Add some space above and below the buttons */
+    background-color: #f8f8f8; /* Metallic white background */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for the container */
+}
+
+/* Styling for the buttons */
+.audio-button {
+    background: linear-gradient(145deg, #d32f2f, #c62828); /* Metallic red gradient */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for metallic effect */
+}
+
+/* Hover effect for the buttons */
+.audio-button:hover {
+    background: linear-gradient(145deg, #c62828, #d32f2f); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Active state for buttons (pressed look) */
+.audio-button:active {
+    background: #b71c1c; /* Darker red on press */
+    transform: translateY(1px); /* Pressed down effect */
+}
+
+/* Styling for the mix controls container */
+.mix-controls {
+    display: flex;
+    justify-content: center; /* Align buttons in the center */
+    gap: 15px; /* Space between buttons */
+    margin: 20px 0; /* Add some space above and below the buttons */
+    background-color: #f8f8f8; /* Metallic white background */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for the container */
+}
+
+/* Styling for the buttons */
+.mix-button {
+    background: linear-gradient(145deg, #d32f2f, #c62828); /* Metallic red gradient */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for metallic effect */
+}
+
+/* Hover effect for the buttons */
+.mix-button:hover {
+    background: linear-gradient(145deg, #c62828, #d32f2f); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Active state for buttons (pressed look) */
+.mix-button:active {
+    background: #b71c1c; /* Darker red on press */
+    transform: translateY(1px); /* Pressed down effect */
+}
+
+.vertical-slider {
+  writing-mode: bt-lr; /* vertical orientation */
+  height: 150px;
+  transform: rotate(180deg); /* Flip to match expectations */
+}
+
+.horizontal-slider {
+  width: 100%;
+}
+
+
+/* Channel Faders Container */
+.channel-faders-Master-light-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px; /* Space between Channel A, Master Light, and Channel B */
+    margin-bottom: 20px;
+}
+/* Vertical Channel Faders */
+.channel-fader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vertical-slider {
+    writing-mode: bt-lr; /* Makes the slider vertical */
+    -webkit-appearance: slider-vertical; /* Ensures vertical style in WebKit browsers */
+    width: 8px;
+    height: 150px;
+    background: linear-gradient(145deg, #d32f2f, #c62828); /* Metallic red gradient */
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); /* 3D effect */
+}
+
+.vertical-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #d32f2f;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.vertical-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #d32f2f;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Master Light Display */
+.master-light-placeholder {
+    width: 60px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f8f8; /* Metallic white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for metallic effect */
+}
+
+.light-display {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d32f2f;
+    text-align: center;
+}
+
+* Crossfader */
+.crossfader-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.horizontal-slider {
+    width: 300px;
+    height: 8px;
+    background: linear-gradient(145deg, #d32f2f, #c62828); /* Metallic red gradient */
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); /* 3D effect */
+}
+
+.horizontal-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #d32f2f;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.horizontal-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #d32f2f;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Music Selection Section */
+.music-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.music-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8; /* Metallic white background */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    width: 50%; /* Take up 50% of the width */
+}
+
+.music-control h3 {
+    font-size: 16px;
+    color: #d32f2f; /* Metallic red theme */
+    margin-bottom: 10px;
+}
+
+/* Track Select Dropdown */
+.track-select {
+    width: 90%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #d32f2f; /* Metallic red border */
+    border-radius: 5px;
+    background: #f8f8f8; /* Metallic white background */
+    color: #d32f2f;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+* File Input */
+.file-input {
+    width: 90%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #d32f2f; /* Metallic red border */
+    border-radius: 5px;
+    background: #f8f8f8; /* Metallic white background */
+    color: #d32f2f;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+}
+
+/* Performance Pad Container */
+.performance-pad-container {
+    display: flex; /* Flex container for horizontal alignment */
+    justify-content: space-between; /* Space between control-buttons and performance-pad */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width of the deck */
+    height: 40%; /* 40% height of the deck */
+    box-sizing: border-box; /* Include padding/borders in width/height calculations */
+    margin: 0 auto; /* Center the container if needed */
+    padding: 10px; /* Add spacing inside the container */
+}
+
+/* Control Buttons Styling */
+.control-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add spacing between buttons */
+    width: 20%; /* Take 20% of the container width */
+    height: 100%; /* Stretch vertically to match container height */
+    padding: 5px; /* Add internal spacing */
+    box-sizing: border-box;
+}
+
+/* Individual Control Buttons */
+.control-buttons .button {
+    width: 100px; /* Adjust width for better readability */
+    height: 60px; /* Adjust height for a vertical layout */
+    font-size: 14px;
+    text-align: centre;
+}
+
+/* Performance Pad */
+.performance-pad {
+    display: grid; /* Keep grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+    gap: 10px; /* Adjust gap for better spacing */
+    width: 75%; /* Take the remaining space in the container */
+    height: auto; /* Adjust height to fill the container */
+    padding: 10px; /* Add spacing around the grid */
+    box-sizing: border-box;
+}
+
+
+/* Performance Pad Grid */
+.performance-pad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+    gap: 10px; /* Reduced gap between buttons */
+    padding: 0; /* Ensure no extra padding around the grid */
+    width: 50%;
+}
+/* Button Styling */
+.button {
+    width: 70px; /* Adjust width if needed */
+    height: 70px;
+    margin: 0; /* Ensure no extra margin around the buttons */
+    padding: 0; /* Remove internal padding */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #900;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #f00, #900);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+/* Button Hover Effect */
+.button:hover {
+    background: linear-gradient(to bottom, #900, #600);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { /* Tablet (e.g., iPad) */
+    .dj-set {
+        flex-direction: row; /* Align decks horizontally */
+        gap: 10px;
+    }
+
+    .deck {
+        flex-basis: 45%; /* Take up 45% of the container width */
+        height: auto;
+    }
+
+    .performance-pad-container {
+        flex-direction: row; /* Align control-buttons and performance-pad horizontally */
+        height: 40%; /* Ensure height stays consistent */
+    }
+}
+
+@media (min-width: 1024px) { /* Laptop/Desktop */
+    .deck {
+        flex-basis: 30%; /* Adjust width for larger screens */
+    }
+
+    .performance-pad-container {
+        flex-direction: row; /* Horizontal alignment for larger screens */
+        height: 40%; /* Maintain height percentage */
+    }
+
+    .performance-pad {
+        width: 65%; /* Wider on larger screens */
+    }
+}
+
+
+
