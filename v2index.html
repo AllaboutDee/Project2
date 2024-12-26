@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta description and keywords for SEO -->
+    <meta name="description" content="Interactive DJ Mixer for seamless track control">
+    <meta name="keywords" content="DJ Mixer, Deck A, Deck B, Audio Controls, Music Mixer">
+    
+    <title>DEE J PRO</title>
+    <link rel="stylesheet" href="assets/css/v2style.css">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script>
+      if (!window.WaveSurfer) {
+        console.error('Wavesurfer.js failed to load.');
+      }
+    </script>
+</head>
+  
+ <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>DEE J PRO - Interactive DJ Mixer</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dj.html">Interactive DJ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+<body>
+    <main class="whole-body-container" id="wholeBody">
+        <div class="theme-controls">
+            <button id="switchTheme" class="button" aria-label="Switch Theme">SWITCH THEME</button>
+            <button id="customizeColour" class="button" aria-label="Customize Color">CUSTOMIZE COLOR</button>
+        </div>
+      
+      <!-- DJ Interface Section -->
+        <div class="dj-interface">
+            <div class="header-container">
+                <div class="waveform-header" id="waveformHeaderA" aria-label="Waveform Deck A"></div>
+                <h1>DEE J PRO: <br> Interactive DJ Mixer</h1>
+                <div class="waveform-header" id="waveformHeaderB" aria-label="Waveform Deck B"></div>
+            </div>
+          
+        <section class="dj-set" id="djSet">
+            <!-- Deck A -->
+            <section class="deck" id="deckA">
+                <h2>DECK A</h2>
+                <div class="waveform" id="waveformA" aria-label="Waveform for Deck A"></div>
+                
+                <!-- Pitch Control and Touchstrip -->
+                <div class="touchstrip-pitch-controls">
+                    <fieldset class="pitch-control" id="pitchControlA">
+                        <legend>Pitch Control</legend>
+                        <button id="pitchMinusA" class="metallic-red" aria-label="Decrease Pitch for Deck A">-</button>
+                        <button id="pitchPlusA" class="metallic-red" aria-label="Increase Pitch for Deck A">+</button>
+                    </fieldset>
+
+                    <fieldset class="touchstrip" id="touchstripA">
+                        <legend>Touchstrip and FX Controls</legend>
+                        <div class="touchstrip-row">
+                            <div class="touchstrip-bar" id="touchstripBarA" aria-label="Touchstrip Bar for Deck A"></div>
+                            <button id="beatsButtonA" class="metallic-red" aria-label="Beats Button for Deck A">BEATS</button>
+                        </div>
+                        <div class="fx-buttons-row">
+                            <button id="fx1ButtonA" class="metallic-red" aria-label="FX1 Button for Deck A">FX1</button>
+                            <button id="fx2ButtonA" class="metallic-red" aria-label="FX2 Button for Deck A">FX2</button>
+                            <button id="fx3ButtonA" class="metallic-red" aria-label="FX3 Button for Deck A">FX3</button>
+                            <button id="tapButtonA" class="metallic-red" aria-label="Tap Button for Deck A">TAP</button>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Tempo Fader, Platter, and Wheel Controls -->
+                <div class="deck-controls-flex">
+                    <fieldset class="tempo-fader" id="tempoFaderA">
+                        <legend>Tempo Control</legend>
+                        <label for="tempoA">TEMPO</label>
+                        <input type="range" id="tempoA" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck A">
+                    </fieldset>
+
+                    <div class="platter" id="platterA" aria-label="Platter for Deck A">
+                        <div class="platter-center"></div>
+                    </div>
+
+                    <fieldset class="wheel-controls-container">
+                        <legend>Wheel Controls</legend>
+                        <button id="wheelScratchA" class="metallic-red" aria-label="Wheel Scratch for Deck A">WHEEL SCRATCH</button>
+                        <button id="wheelNudgeA" class="metallic-red" aria-label="Wheel Nudge for Deck A">WHEEL NUDGE</button>
+                    </fieldset>
+                </div>
+
+                <!-- Performance Pad and Control Buttons -->
+                <div class="performance-pad-container">
+                    <fieldset class="performance-pad">
+                        <legend>Performance Pad</legend>
+                        <button id="manualLoopInA" class="button metallic-red" aria-label="Manual Loop In for Deck A">Manual Loop IN</button>
+                        <button id="manualLoopOutA" class="button metallic-red" aria-label="Manual Loop Out for Deck A">Manual Loop OUT</button>
+                        <button id="autoLoopInA" class="button metallic-red" aria-label="Auto Loop In for Deck A">Auto Loop IN</button>
+                        <button id="autoLoopOutA" class="button metallic-red" aria-label="Auto Loop Out for Deck A">Auto Loop OUT</button>
+                        <button id="halfSpeedA" class="button metallic-red" aria-label="Half Speed for Deck A">0.5x Speed</button>
+                        <button id="doubleSpeedA" class="button metallic-red" aria-label="Double Speed for Deck A">x2 Speed</button>
+                        <button id="sampler1A" class="button metallic-red" aria-label="Sampler 1 for Deck A">Sampler 1</button>
+                        <button id="sampler2A" class="button metallic-red" aria-label="Sampler 2 for Deck A">Sampler 2</button>
+                        <button id="cue1A" class="button metallic-red" aria-label="Cue 1 for Deck A">CUE 1</button>
+                        <button id="cue2A" class="button metallic-red" aria-label="Cue 2 for Deck A">CUE 2</button>
+                        <button id="cue3A" class="button metallic-red" aria-label="Cue 3 for Deck A">CUE 3</button>
+                        <button id="cue4A" class="button metallic-red" aria-label="Cue 4 for Deck A">CUE 4</button>
+                    </fieldset>
+
+                    <fieldset class="control-buttons">
+                        <legend>Control Buttons</legend>
+                        <button id="syncButtonA" class="button metallic-red" aria-label="Sync Button for Deck A">SYNC</button>
+                        <button id="cueButtonA" class="button metallic-red" aria-label="Cue Button for Deck A">CUE</button>
+                        <button id="playButtonA" class="button metallic-red" aria-label="Play/Pause for Deck A">PLAY/PAUSE</button>
+                    </fieldset>
+                </div>
+            </section>
+          
+            <!-- Additional sections for Mixer, Deck B, etc., can follow the same pattern -->
+          <!-- Div for Mixer (Div 5) -->
+<div class="mixer" id="mixer-section">
+    <h2>Mixer</h2>
+
+    <!-- Section for Equalizers, Browser, Gain, Cue Mix, Cue Gain -->
+    <div class="eq-gains-container">
+        <!-- Equalizer Controls for Deck A -->
+        <fieldset class="equalizer" id="equalizerA">
+            <legend>Equalizer - Deck A</legend>
+            <label for="bassA">Bass:</label>
+            <input type="range" id="bassA" min="-10" max="10" value="0" aria-label="Bass control for Deck A">
+            <label for="midA">Mid:</label>
+            <input type="range" id="midA" min="-10" max="10" value="0" aria-label="Mid control for Deck A">
+            <label for="trebleA">Treble:</label>
+            <input type="range" id="trebleA" min="-10" max="10" value="0" aria-label="Treble control for Deck A">
+        </fieldset>
+
+        <!-- Master Output and Cue Controls -->
+        <fieldset class="master-cue-controls">
+            <legend>Master Output and Cue Controls</legend>
+            <div class="control-group" id="masterGainControl">
+                <label for="masterGain">Master Gain:</label>
+                <input type="range" id="masterGain" min="0" max="2" step="0.01" value="1" aria-label="Master gain control">
+            </div>
+            <div class="control-group" id="cueMixControl">
+                <label for="cueMix">Cue Mix:</label>
+                <input type="range" id="cueMix" min="0" max="1" step="0.01" value="0.5" aria-label="Cue mix control">
+            </div>
+            <div class="control-group" id="cueGainControl">
+                <label for="cueGain">Cue Gain:</label>
+                <input type="range" id="cueGain" min="0" max="2" step="0.01" value="1" aria-label="Cue gain control">
+            </div>
+        </fieldset>
+
+        <!-- Equalizer Controls for Deck B -->
+        <fieldset class="equalizer" id="equalizerB">
+            <legend>Equalizer - Deck B</legend>
+            <label for="bassB">Bass:</label>
+            <input type="range" id="bassB" min="-10" max="10" value="0" aria-label="Bass control for Deck B">
+            <label for="midB">Mid:</label>
+            <input type="range" id="midB" min="-10" max="10" value="0" aria-label="Mid control for Deck B">
+            <label for="trebleB">Treble:</label>
+            <input type="range" id="trebleB" min="-10" max="10" value="0" aria-label="Treble control for Deck B">
+        </fieldset>
+    </div>
+
+    <!-- Filters for Deck A and Deck B -->
+    <fieldset class="filters">
+        <legend>Filters</legend>
+        <div class="filter-group" id="filterDeckA">
+            <h4>Deck A Filter</h4>
+            <label for="filterFreqA">Frequency:</label>
+            <input type="range" id="filterFreqA" min="20" max="20000" step="1" value="1000" aria-label="Frequency control for Deck A">
+            <output id="filterFreqLabelA" aria-live="polite">1000 Hz</output>
+        </div>
+        <div class="filter-group" id="filterDeckB">
+            <h4>Deck B Filter</h4>
+            <label for="filterFreqB">Frequency:</label>
+            <input type="range" id="filterFreqB" min="20" max="20000" step="1" value="1000" aria-label="Frequency control for Deck B">
+            <output id="filterFreqLabelB" aria-live="polite">1000 Hz</output>
+        </div>
+    </fieldset>
+
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+        <button id="headphoneA" class="button audio-button" aria-label="Headphone for Deck A">Headphone (Deck A)</button>
+        <button id="mic" class="button audio-button" aria-label="Microphone">MIC</button>
+        <button id="headphoneB" class="button audio-button" aria-label="Headphone for Deck B">Headphone (Deck B)</button>
+    </div>
+
+    <!-- Mix Controls -->
+    <div class="mix-controls">
+        <button id="recordMix" class="button mix-button" aria-label="Record Mix">Record</button>
+        <button id="saveMix" class="button mix-button" aria-label="Save Mix">Save Mix</button>
+        <button id="loadMix" class="button mix-button" aria-label="Load Mix">Load Mix</button>
+    </div>
+
+    <!-- Channel Faders and Master Light -->
+    <div class="channel-faders-Master-light-container">
+        <div class="channel-fader">
+            <label for="channelFaderA">Channel A Volume</label>
+            <input type="range" id="channelFaderA" min="0" max="1" step="0.01" value="0.5" class="vertical-slider" aria-label="Channel A volume fader">
+        </div>
+        <div class="master-light-placeholder">
+            <div class="light-display" aria-label="Master Light Display">Master Light</div>
+        </div>
+        <div class="channel-fader">
+            <label for="channelFaderB">Channel B Volume</label>
+            <input type="range" id="channelFaderB" min="0" max="1" step="0.01" value="0.5" class="vertical-slider" aria-label="Channel B volume fader">
+        </div>
+    </div>
+
+    <!-- Crossfader -->
+    <div class="crossfader-container">
+        <label for="crossfader">Crossfader:</label>
+        <input type="range" id="crossfader" min="0" max="100" value="50" class="horizontal-slider" aria-label="Crossfader control">
+    </div>
+
+    <!-- Music Selection -->
+    <div class="music-selection">
+        <div class="music-control">
+            <h3>Deck A</h3>
+            <label for="selectTrackA">Select Track:</label>
+            <select id="selectTrackA" class="track-select" aria-label="Select track for Deck A">
+                <option value="track1">Track 1</option>
+                <option value="track2">Track 2</option>
+                <option value="track3">Track 3</option>
+                <option value="track4">Track 4</option>
+                <option value="track5">Track 5</option>
+            </select>
+            <label for="fileA">Upload Track:</label>
+            <input type="file" id="fileA" accept="audio/*" class="file-input" aria-label="Upload track for Deck A">
+        </div>
+        <div class="music-control">
+            <h3>Deck B</h3>
+            <label for="selectTrackB">Select Track:</label>
+            <select id="selectTrackB" class="track-select" aria-label="Select track for Deck B">
+                <option value="track1">Track 1</option>
+                <option value="track2">Track 2</option>
+                <option value="track3">Track 3</option>
+                <option value="track4">Track 4</option>
+                <option value="track5">Track 5</option>
+            </select>
+            <label for="fileB">Upload Track:</label>
+            <input type="file" id="fileB" accept="audio/*" class="file-input" aria-label="Upload track for Deck B">
+        </div>
+    </div>
+</div>
+
+<!-- Deck B -->
+            <section class="deck" id="deckB">
+                <h2>DECK B</h2>
+                <div class="waveform" id="waveformB" aria-label="Waveform for Deck B"></div>
+
+                <!-- Pitch Control and Touchstrip -->
+                <div class="touchstrip-pitch-controls">
+                    <fieldset class="touchstrip" id="touchstripB">
+                        <legend>Touchstrip and FX Controls</legend>
+                        <div class="touchstrip-row">
+                            <div class="touchstrip-bar" id="touchstripBarB" aria-label="Touchstrip Bar for Deck B"></div>
+                            <button id="beatsButtonB" class="metallic-red">BEATS</button>
+                        </div>
+                        <div class="fx-buttons-row">
+                            <button id="fx1ButtonB" class="metallic-red">FX1</button>
+                            <button id="fx2ButtonB" class="metallic-red">FX2</button>
+                            <button id="fx3ButtonB" class="metallic-red">FX3</button>
+                            <button id="tapButtonB" class="metallic-red">TAP</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="pitch-control" id="pitchControlB">
+                        <legend>Pitch Control</legend>
+                        <button id="pitchMinusB" class="metallic-red">-</button>
+                        <button id="pitchPlusB" class="metallic-red">+</button>
+                    </fieldset>
+                </div>
+
+                <!-- Tempo Fader, Platter, and Wheel Controls -->
+                <div class="deck-controls-flex">
+                    <fieldset class="tempo-fader" id="tempoFaderB">
+                        <legend>Tempo Control</legend>
+                        <label for="tempoB">Tempo</label>
+                        <input type="range" id="tempoB" min="50" max="150" value="100">
+                    </fieldset>
+
+                    <div class="platter" id="platterB">
+                        <div class="platter-center" aria-label="Platter Center"></div>
+                    </div>
+
+                    <fieldset class="wheel-controls-container">
+                        <legend>Wheel Controls</legend>
+                        <button id="wheelScratchB" class="metallic-red">WHEEL SCRATCH</button>
+                        <button id="wheelNudgeB" class="metallic-red">WHEEL NUDGE</button>
+                    </fieldset>
+                </div>
+
+                <!-- Performance Pad and Control Buttons -->
+                <div class="performance-pad-container">
+                    <fieldset class="performance-pad">
+                        <legend>Performance Pad</legend>
+                        <button id="manualLoopInB" class="button metallic-red">Manual Loop IN</button>
+                        <button id="manualLoopOutB" class="button metallic-red">Manual Loop OUT</button>
+                        <button id="autoLoopInB" class="button metallic-red">Auto Loop IN</button>
+                        <button id="autoLoopOutB" class="button metallic-red">Auto Loop OUT</button>
+                        <button id="halfSpeedB" class="button metallic-red">0.5x Speed</button>
+                        <button id="doubleSpeedB" class="button metallic-red">x2 Speed</button>
+                        <button id="sampler1B" class="button metallic-red">Sampler 1</button>
+                        <button id="sampler2B" class="button metallic-red">Sampler 2</button>
+                        <button id="cue1B" class="button metallic-red">CUE 1</button>
+                        <button id="cue2B" class="button metallic-red">CUE 2</button>
+                        <button id="cue3B" class="button metallic-red">CUE 3</button>
+                        <button id="cue4B" class="button metallic-red">CUE 4</button>
+                    </fieldset>
+
+                    <fieldset class="control-buttons">
+                        <legend>Control Buttons</legend>
+                        <button id="syncButtonB" class="button metallic-red">SYNC</button>
+                        <button id="cueButtonB" class="button metallic-red">CUE</button>
+                        <button id="playButtonB" class="button metallic-red">PLAY/PAUSE</button>
+                    </fieldset>
+                </div>
+            </section>
+        </section>
+
+<!-- Music and Sampler Display Section -->
+<div class="music-sampler-display" id="musicSamplerDisplay">
+
+    <!-- Sampler A Display -->
+    <fieldset class="sampler-display" id="samplerDisplayA">
+        <legend>Sampler A Display</legend>
+    </fieldset>
+
+    <!-- Music A Display -->
+    <fieldset class="music-display" id="musicDisplayA">
+        <legend>Music Display Deck A</legend>
+    </fieldset>
+
+    <!-- Music B Display -->
+    <fieldset class="music-display" id="musicDisplayB">
+        <legend>Music Display Deck B</legend>
+    </fieldset>
+
+    <!-- Sampler B Display -->
+    <fieldset class="sampler-display" id="samplerDisplayB">
+        <legend>Sampler B Display</legend>
+    </fieldset>
+
+</div>    
+        </section>
+
+    </main>
+  
+  <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 DEE J PRO. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    <script src="assets/js/script.js" defer></script>
+  
+</body>
+</html>

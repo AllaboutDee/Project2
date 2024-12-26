@@ -1,0 +1,220 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #eee, #bbb);
+    color: #333;
+}
+
+/* Whole Body Container */
+.wholeBody {
+    position: relative;
+    width: 100%;
+}
+
+.whole-body-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 3rem; /* Prevent overlap with theme controls */
+}
+
+/* Main Header Styles */
+header {
+    background-color: #333; /* Solid bar background */
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Space between nav and logo */
+    align-items: center;
+    padding: 20px 20px; /* Double the padding for increased height */
+    height: 120px; /* Fixed height for consistency */
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 28px; /* Slightly larger font size for prominence */
+}
+
+header nav {
+    margin-left: auto; /* Push the nav bar to the far right */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Arrange navigation items horizontally */
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Space between navigation items */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove underlines */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background-color: #555; /* Button background color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
+}
+
+header nav ul li a:hover {
+    background-color: #ffcc00; /* Button highlight on hover */
+    color: #333; /* Text color on hover */
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-footer .footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.main-footer .social-links {
+    margin-top: 10px;
+}
+
+.main-footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.main-footer .social-links a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align logo and navigation to the left */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 10px; /* Adjust spacing */
+    }
+
+    .main-footer .footer-content {
+        flex-direction: column;
+    }
+
+    .main-footer .social-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .main-footer .social-links a {
+        margin: 5px 0;
+    }
+
+    .dj-set {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+
+    .deck, .mixer {
+        width: 100%; /* Full width for small screens */
+    }
+
+    .touchstrip-pitch-controls {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+
+    .pitch-control,
+    .touchstrip {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .touchstrip-row {
+        flex-direction: column; /* Stack touchstrip bar and BEATS button */
+        align-items: center;
+    }
+
+    .touchstrip-bar {
+        margin-right: 0;
+        width: 100%; /* Full width for small screens */
+    }
+
+    .fx-buttons-row {
+        flex-wrap: wrap; /* Allow buttons to wrap */
+        gap: 10px;
+    }
+
+    .fx-buttons-row button {
+        width: calc(50% - 5px); /* Two buttons per row */
+    }
+
+    .deck-controls-flex {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        height: auto;
+    }
+
+    .platter {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .tempo-fader,
+    .wheel-controls-container {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dj-set {
+        grid-template-columns: 1fr 1fr; /* Two column layout for tablets */
+    }
+
+    .deck, .mixer {
+        width: 100%; /* Full width for tablets */
+    }
+
+    .deck-controls-flex {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .platter {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dj-set {
+        grid-template-columns: 1fr 1fr 1fr; /* Three column layout for desktops */
+    }
+
+    .deck, .mixer {
+        width: 100%; /* Full width for desktops */
+    }
+
+    .deck-controls-flex {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .platter {
+        max-width: 275px;
+        max-height: 275px;
+    }
+}
