@@ -33,14 +33,13 @@ body {
     justify-content: flex-end;
     padding: 10px;
     gap: 10px;
-}
-.theme-controls {
     position: absolute;
     top: 0;
     right: 0;
-  z-index: 10; /* Ensure it appears above other elements */
+    z-index: 10; /* Ensure it appears above other elements */
     margin: 1rem;
 }
+
 
 .theme-controls button {
     padding: 8px 12px;
@@ -50,20 +49,22 @@ body {
     color: white;
     cursor: pointer;
     box-shadow: 0 0 5px #000;
-    width: 100px;
+    width: 150px;
+    height: 50px;
 }
 
 /* Main Header Styles */
 header {
     background-color: #333; /* Solid bar background */
-    color: white;
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Lower z-index than .theme-controls */
     display: flex;
     justify-content: space-between; /* Space between nav and logo */
     align-items: center;
     padding: 20px 20px; /* Double the padding for increased height */
     height: 120px; /* Fixed height for consistency */
-    position: relative;
 }
+
 
 header .logo {
     position: absolute;
@@ -132,7 +133,7 @@ header nav ul li a:hover {
 
 /* Waveform Styling */
 .waveform-header {
-    width: 550px; /* Ensure both waveforms have equal width */
+    width: 900px; /* Ensure both waveforms have equal width */
     height: 100px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -161,9 +162,15 @@ waveformHeaderB.on('error', (error) => {
     align-items: stretch;
     gap: 10px; /* Add spacing between Decks and Mixer */
     width: 100%;
+    height: 100%;
     padding: 20px;
     box-sizing: border-box; /* Include padding in width calculation */
+    border: 5px solid #900; /* Metallic red border */
+    background: linear-gradient(to bottom, #f00, #900); /* Metallic red background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for metallic effect */
 }
+
 
 /* Deck Controls Flex Container */
 .deck-controls-flex {
@@ -171,6 +178,16 @@ waveformHeaderB.on('error', (error) => {
     justify-content: space-between;
     align-items: center;
     gap: 20px; /* Adjust gap as needed */
+    height: 500px;
+}
+
+/* Centered and styled h2 elements */
+.deck h2, .mixer h2 {
+    text-align: center;
+    color: #d32f2f; /* Metallic red color */
+    font-weight: bold;
+    font-size: 40px; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Add some space below the heading */
 }
 
 /* Tempo Fader */
@@ -189,11 +206,36 @@ waveformHeaderB.on('error', (error) => {
 }
 
 .tempo-fader input[type="range"] {
-    writing-mode: bt-lr; /* Vertical orientation */
-    -webkit-appearance: slider-vertical; /* For WebKit browsers */
-    width: 8px; /* Adjust width as needed */
-    height: 150px; /* Adjust height as needed */
-    background: linear-gradient(to bottom, #f00, #900); /* Metallic red background */
+    width: 10px; /* Slimmer width */
+    height: 200px; /* Adjust height as needed */
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none; /* Remove default styling */
+    background: white; /* White slider background */
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); /* 3D effect */
+}
+
+.tempo-fader input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* Adjust thumb width as needed */
+    height: 20px; /* Adjust thumb height as needed */
+    background: white; /* White thumb color */
+    border: 2px solid #d32f2f; /* Red border */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tempo-fader input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Adjust thumb width as needed */
+    height: 20px; /* Adjust thumb height as needed */
+    background: white; /* White thumb color */
+    border: 2px solid #d32f2f; /* Red border */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Platter */
@@ -201,8 +243,8 @@ waveformHeaderB.on('error', (error) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px; /* Adjust size as needed */
-    height: 200px; /* Adjust size as needed */
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
     background: #333; /* Background color */
     border-radius: 50%;
     position: relative;
@@ -225,6 +267,7 @@ waveformHeaderB.on('error', (error) => {
 
 .wheel-controls-container button {
     width: 100px; /* Adjust width as needed */
+    height: 100px;
     padding: 10px;
     background: linear-gradient(to bottom, #f00, #900); /* Metallic red background */
     color: #fff; /* White text color */
@@ -455,7 +498,7 @@ filter-group input[type="range"]::-moz-range-thumb {
 
 
 .pitch-control button {
-    width: 20%;
+    width: 40%;
     padding: 8px;
     font-size: 16px;
 }
@@ -547,15 +590,15 @@ filter-group input[type="range"]::-moz-range-thumb {
 /* Platter Styling */
 .platter {
     flex: 1 1 70%; /* 70% of the width */
-    max-width: 275px;
-    max-height: 275px;
+    max-width: 350px;
+    max-height: 350px;
     margin: auto;
 }
 
 /* Platter Styling */
 .platter {
-    width: 275px;
-    height: 275px;
+    width: 350px;
+    height: 350px;
     margin: 20px auto;
     border-radius: 50%;
     background: radial-gradient(circle, silver, gray);
@@ -616,11 +659,14 @@ filter-group input[type="range"]::-moz-range-thumb {
 
 /* Mixer Section */
 .mixer {
+    flex: 0 0 30%; /* 30% width */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin: 20px 0;
+    height: 100%; /* Ensure the mixer container takes up the full height */
+    box-sizing: border-box; /* Include padding/borders in width/height calculations */
+    background: linear-gradient(to bottom, #f8f8f8, #e0e0e0); /* Metallic white gradient */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5); /* Subtle shadow for metallic effect */
 }
 
 /* Styling for the audio controls container */
@@ -720,7 +766,7 @@ vertical-slider {
     align-items: center;
 }
 
-.vertical-slider, .horizontal-slider, .tempo-controller {
+.vertical-slider, .horizontal-slider {
     -webkit-appearance: none; /* Remove default styling */
     appearance: none; /* Remove default styling */
     background: linear-gradient(to bottom, #f00, #900); /* Metallic red gradient */
@@ -730,12 +776,12 @@ vertical-slider {
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); /* 3D effect */
 }
 
-.vertical-slider, .tempo-controller {
+.vertical-slider {
     width: 20px; /* Adjust width as needed */
     height: 200px; /* Adjust height as needed */
 }
 
-.vertical-slider::-webkit-slider-thumb, .tempo-controller::-webkit-slider-thumb {
+.vertical-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
@@ -746,7 +792,7 @@ vertical-slider {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.vertical-slider::-moz-range-thumb , .tempo-controller::-moz-range-thumb {
+.vertical-slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
     background: white;
@@ -758,8 +804,8 @@ vertical-slider {
 
 /* Master Light Display */
 .master-light-placeholder {
-    width: 60px;
-    height: 150px;
+    width: 150px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -866,7 +912,7 @@ vertical-slider {
     cursor: pointer;
 }
 
-* File Input */
+/* File Input */
 .file-input {
     width: 90%;
     padding: 8px 12px;
@@ -880,13 +926,51 @@ vertical-slider {
     cursor: pointer;
 }
 
+/* Deck Container */
+.deck {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure the deck container takes up the full height */
+    flex: 1;; /* Ensure the deck container takes up the full width */
+    box-sizing: border-box; /* Include padding/borders in width/height calculations */
+    background: linear-gradient(to bottom, #f8f8f8, #e0e0e0); /* Metallic white gradient */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5); /* Subtle shadow for metallic effect */
+}
+
+
+/* Touchstrip Pitch Controls */
+.touchstrip-pitch-controls {
+    display: flex; /* Flex container for horizontal alignment */
+    justify-content: space-between; /* Space between control-buttons and performance-pad */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width of the deck */
+    height: 20%; /* 40% height of the deck */
+    box-sizing: border-box; /* Include padding/borders in width/height calculations */
+    margin: 0 auto; /* Center the container if needed */
+    padding: 10px; /* Add spacing inside the container */
+}
+
+/* Deck Controls Flex Container */
+.deck-controls-flex {
+    display: flex; /* Flex container for horizontal alignment */
+    justify-content: space-between; /* Space between control-buttons and performance-pad */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width of the deck */
+    height: 20%; /* 40% height of the deck */
+    box-sizing: border-box; /* Include padding/borders in width/height calculations */
+    margin: 0 auto; /* Center the container if needed */
+    padding: 10px; /* Add spacing inside the container */
+}
+
+
 /* Performance Pad Container */
 .performance-pad-container {
     display: flex; /* Flex container for horizontal alignment */
     justify-content: space-between; /* Space between control-buttons and performance-pad */
     align-items: center; /* Center items vertically */
     width: 100%; /* Full width of the deck */
-    height: 40%; /* 40% height of the deck */
+    height: 50%; /* 40% height of the deck */
     box-sizing: border-box; /* Include padding/borders in width/height calculations */
     margin: 0 auto; /* Center the container if needed */
     padding: 10px; /* Add spacing inside the container */
@@ -900,7 +984,7 @@ vertical-slider {
     align-items: center;
     gap: 10px; /* Add spacing between buttons */
     width: 20%; /* Take 20% of the container width */
-    height: 100%; /* Stretch vertically to match container height */
+    height: 55%; /* Stretch vertically to match container height */
     padding: 5px; /* Add internal spacing */
     box-sizing: border-box;
 }
@@ -908,7 +992,7 @@ vertical-slider {
 /* Individual Control Buttons */
 .control-buttons .button {
     width: 100px; /* Adjust width for better readability */
-    height: 60px; /* Adjust height for a vertical layout */
+    height: 100px; /* Adjust height for a vertical layout */
     font-size: 14px;
     text-align: centre;
 }
@@ -918,25 +1002,18 @@ vertical-slider {
     display: grid; /* Keep grid layout */
     grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
     gap: 10px; /* Adjust gap for better spacing */
-    width: 75%; /* Take the remaining space in the container */
+    width: 70%; /* Take the remaining space in the container */
     height: auto; /* Adjust height to fill the container */
     padding: 10px; /* Add spacing around the grid */
     box-sizing: border-box;
 }
 
 
-/* Performance Pad Grid */
-.performance-pad {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
-    gap: 10px; /* Reduced gap between buttons */
-    padding: 0; /* Ensure no extra padding around the grid */
-    width: 50%;
-}
+
 /* Button Styling */
 .button {
-    width: 70px; /* Adjust width if needed */
-    height: 70px;
+    width: 100px; /* Adjust width if needed */
+    height: 100px;
     margin: 0; /* Ensure no extra margin around the buttons */
     padding: 0; /* Remove internal padding */
     font-size: 12px;
@@ -1047,7 +1124,9 @@ vertical-slider {
 
 /* Mixer Styling */
 .mixer {
-    background: linear-gradient(to bottom, #fff, #eee);
+    background: linear-gradient(to bottom, #f8f8f8, #e0e0e0); /* Metallic white gradient */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5); /* Subtle shadow for metallic effect */
     color: #900;
     padding: 20px;
     border: 5px solid #900;

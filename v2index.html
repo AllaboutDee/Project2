@@ -124,7 +124,7 @@
             <!-- Additional sections for Mixer, Deck B, etc., can follow the same pattern -->
           <!-- Div for Mixer (Div 5) -->
 <div class="mixer" id="mixer-section">
-    <h2>Mixer</h2>
+    <h2>MIXER</h2>
 
     <!-- Section for Equalizers, Browser, Gain, Cue Mix, Cue Gain -->
     <div class="eq-gains-container">
@@ -281,25 +281,33 @@
 
                 <!-- Tempo Fader, Platter, and Wheel Controls -->
                 <div class="deck-controls-flex">
-                    <fieldset class="tempo-fader" id="tempoFaderB">
-                        <legend>Tempo Control</legend>
-                        <label for="tempoB">Tempo</label>
-                        <input type="range" id="tempoB" min="50" max="150" value="100">
+                    <fieldset class="wheel-controls-container">
+                        <legend>Wheel Controls</legend>
+                        <button id="wheelScratchB" class="metallic-red">WHEEL SCRATCH</button>
+                        <button id="wheelNudgeB" class="metallic-red">WHEEL NUDGE</button>
                     </fieldset>
 
                     <div class="platter" id="platterB">
                         <div class="platter-center" aria-label="Platter Center"></div>
                     </div>
 
-                    <fieldset class="wheel-controls-container">
-                        <legend>Wheel Controls</legend>
-                        <button id="wheelScratchB" class="metallic-red">WHEEL SCRATCH</button>
-                        <button id="wheelNudgeB" class="metallic-red">WHEEL NUDGE</button>
+                    <fieldset class="tempo-fader" id="tempoFaderB">
+                        <legend>Tempo Control</legend>
+                        <label for="tempoB">TEMPO</label>
+                        <input type="range" id="tempoB" min="50" max="150" value="100">
                     </fieldset>
+                    
                 </div>
 
                 <!-- Performance Pad and Control Buttons -->
                 <div class="performance-pad-container">
+                    <fieldset class="control-buttons">
+                        <legend>Control Buttons</legend>
+                        <button id="syncButtonB" class="button metallic-red">SYNC</button>
+                        <button id="cueButtonB" class="button metallic-red">CUE</button>
+                        <button id="playButtonB" class="button metallic-red">PLAY/PAUSE</button>
+                    </fieldset>
+
                     <fieldset class="performance-pad">
                         <legend>Performance Pad</legend>
                         <button id="manualLoopInB" class="button metallic-red">Manual Loop IN</button>
@@ -314,13 +322,6 @@
                         <button id="cue2B" class="button metallic-red">CUE 2</button>
                         <button id="cue3B" class="button metallic-red">CUE 3</button>
                         <button id="cue4B" class="button metallic-red">CUE 4</button>
-                    </fieldset>
-
-                    <fieldset class="control-buttons">
-                        <legend>Control Buttons</legend>
-                        <button id="syncButtonB" class="button metallic-red">SYNC</button>
-                        <button id="cueButtonB" class="button metallic-red">CUE</button>
-                        <button id="playButtonB" class="button metallic-red">PLAY/PAUSE</button>
                     </fieldset>
                 </div>
             </section>
