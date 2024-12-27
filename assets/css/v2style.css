@@ -34,10 +34,9 @@ body {
     padding: 10px;
     gap: 10px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 40px;
+    left: 20px;
     z-index: 10; /* Ensure it appears above other elements */
-    margin: 1rem;
 }
 
 
@@ -45,8 +44,9 @@ body {
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(to bottom, #c00, #800);
-    color: white;
+    background: #f8f8f8; /* Metallic white background */
+    color: black; 
+    font: bold;
     cursor: pointer;
     box-shadow: 0 0 5px #000;
     width: 150px;
@@ -55,7 +55,7 @@ body {
 
 /* Main Header Styles */
 header {
-    background-color: #333; /* Solid bar background */
+    background: linear-gradient(to bottom, #f00, #900); /* Metallic red gradient */
     position: relative; /* Ensure proper stacking context */
     z-index: 1; /* Lower z-index than .theme-controls */
     display: flex;
@@ -74,7 +74,7 @@ header .logo {
 
 header .logo h1 {
     margin: 0;
-    font-size: 28px; /* Slightly larger font size for prominence */
+    font-size: 80px; /* Slightly larger font size for prominence */
 }
 
 header nav {
@@ -126,14 +126,14 @@ header nav ul li a:hover {
 .dj-header-container h1 {
     margin: 0;
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
     color: white;
     flex: 0 0 auto; /* Prevent H1 from resizing */
 }
 
 /* Waveform Styling */
 .waveform-header {
-    width: 900px; /* Ensure both waveforms have equal width */
+    width: 1000px; /* Ensure both waveforms have equal width */
     height: 100px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -150,20 +150,18 @@ waveformHeaderB.on('error', (error) => {
 
 /* Styling for main dj set - Deck A, Mixer, Deck B */
 .dj-set {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
     padding: 1rem;
 }
 
 .dj-set {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: space-between;
     align-items: stretch;
-    gap: 10px; /* Add spacing between Decks and Mixer */
+    gap: 10px; /* Add spacing between Decks and Mixer */    
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 1rem;
     box-sizing: border-box; /* Include padding in width calculation */
     border: 5px solid #900; /* Metallic red border */
     background: linear-gradient(to bottom, #f00, #900); /* Metallic red background */
@@ -207,7 +205,7 @@ waveformHeaderB.on('error', (error) => {
 
 .tempo-fader input[type="range"] {
     width: 10px; /* Slimmer width */
-    height: 200px; /* Adjust height as needed */
+    height: 300px; /* Adjust height as needed */
     -webkit-appearance: none; /* Remove default styling */
     appearance: none; /* Remove default styling */
     background: white; /* White slider background */
@@ -295,11 +293,11 @@ waveformHeaderB.on('error', (error) => {
     align-items: center;
     padding: 10px;
     border-radius: 5px;
-    width: 100px; /* Adjust width as needed */
+    width:30% ; /*Adjust width as needed */
 }
 
 .equalizer label {
-    margin-bottom: 5px;
+    margin-bottom: 5px;red
     color: #d75b5b; /* White text color */
 }
 
@@ -435,22 +433,55 @@ filter-group input[type="range"]::-moz-range-thumb {
 
 
 
-
-
-
-
-/* Music Sampler Display */
+/* Music and Sampler Display Section */
 .music-sampler-display {
-    margin-top: 20px; /* Add spacing from the DJ set */
-    background: linear-gradient(to bottom, #fff, #eee);
-    color: #900;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+    gap: 10px; /* Adjust gap as needed */
     padding: 20px;
-    border: 5px solid #900;
-    box-shadow: 0 0 10px #000;
-    text-align: center;
-    border-radius: 20px;
-    width: 100%; /* Full width of parent container */
-    flex: 1;
+    box-sizing: border-box; /* Include padding in width calculation */
+    background: linear-gradient(to bottom, #f00, #900); /* Metallic red background */
+    border: 5px solid #900; /* Metallic red border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for metallic effect */
+    height: 300px; /* Adjust height as needed to display up to 5 tracks */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    position: relative; /* Ensure proper positioning of legend */
+    padding-top: 30px; /* Add padding to the top to make space for the legend */
+}
+
+
+.music-sampler-display legend {
+    font-size: 1.2em; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #fff; /* Metallic red color */
+    padding: 0 10px; /* Add padding to the sides */
+    background: linear-gradient(to bottom, #900, #600); /* Darker gradient for better contrast */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Position the legend absolutely */
+    top: -20px; /* Position the legend above the fieldset */
+    left: 10px; /* Align the legend with the fieldset padding */
+}
+
+.music-sampler-display fieldset {
+    box-sizing: border-box; /* Include padding/borders in width/height calculations */
+    padding: 10px;
+    border: 2px solid #900; /* Metallic red border */
+    background: linear-gradient(to bottom, #f8f8f8, #e0e0e0); /* Metallic white gradient */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for metallic effect */
+    height: 100%; /* Ensure fieldsets take up the full height of the container */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.sampler-display {
+    flex: 0 0 17.5%; /* 20% width */
+}
+
+.music-display {
+    flex: 0 0 30%; /* 30% width */
 }
 
 @media (min-width: 768px) {
@@ -463,8 +494,9 @@ filter-group input[type="range"]::-moz-range-thumb {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
-    background-color: #f9f9f9;
-}
+    background: linear-gradient(to bottom, #fff, #eee); /* Metallic white effect */
+    color: #900;
+    
 
 .waveform {
     width: 100%;
@@ -601,24 +633,31 @@ filter-group input[type="range"]::-moz-range-thumb {
     height: 350px;
     margin: 20px auto;
     border-radius: 50%;
-    background: radial-gradient(circle, silver, gray);
+    background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0, #a0a0a0); /* Enhanced metallic silver gradient */
     border: 12px solid #900;
-    box-shadow: 0 0 15px #000 inset;
+    box-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.9) inset, /* Inner shadow for depth */
+        0 10px 20px rgba(0, 0, 0, 0.9), /* Outer shadow for 3D effect */
+        0 -10px 20px rgba(255, 255, 255, 0.3) inset, /* Inner highlight for shine */
+        0 0 30px rgba(255, 255, 255, 0.5) inset; /* Additional inner highlight for more shine */
     position: relative;
 }
-
+/* Platter Center Styling */
 .platter-center {
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle, #900, #600);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #460505, #900);
     border: 3px solid #fff;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 5px #000;
-}
+    box-shadow: 
+        0 0 5px rgba(0, 0, 0, 0.5), /* Outer shadow for 3D effect */
+        0 0 10px rgba(255, 255, 255, 0.5) inset, /* Inner highlight for shine */
+        0 0 15px rgba(255, 255, 255, 0.7) inset; /* Additional inner highlight for more shine */
+}}
 
 /* Wheel Controls Container */
 .wheel-controls-flex {
@@ -662,9 +701,9 @@ filter-group input[type="range"]::-moz-range-thumb {
     flex: 0 0 30%; /* 30% width */
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensure the mixer container takes up the full height */
     box-sizing: border-box; /* Include padding/borders in width/height calculations */
-    background: linear-gradient(to bottom, #f8f8f8, #e0e0e0); /* Metallic white gradient */
+    background: linear-gradient(to bottom, #fff, #eee); /* Metallic white effect */
+    color: #900;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5); /* Subtle shadow for metallic effect */
 }
@@ -811,7 +850,7 @@ vertical-slider {
     align-items: center;
     background: #f8f8f8; /* Metallic white background */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for metallic effect */
+    box-shadow: 0 4px 8px rgba(139, 4, 4, 0.9); /* Subtle shadow for metallic effect */
 }
 
 .light-display {
@@ -878,6 +917,7 @@ vertical-slider {
     gap: 20px;
     margin-top: 20px;
     width: 100%;
+
 }
 
 .music-control {
@@ -889,6 +929,7 @@ vertical-slider {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     width: 50%; /* Take up 50% of the width */
+    box-shadow: 0 4px 8px rgba(139, 4, 4, 0.9); /* Subtle shadow for metallic effect */
 }
 
 .music-control h3 {
@@ -930,8 +971,7 @@ vertical-slider {
 .deck {
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensure the deck container takes up the full height */
-    flex: 1;; /* Ensure the deck container takes up the full width */
+    flex: 1; /* Ensure the deck container takes up the full width */
     box-sizing: border-box; /* Include padding/borders in width/height calculations */
     background: linear-gradient(to bottom, #f8f8f8, #e0e0e0); /* Metallic white gradient */
     border-radius: 10px; /* Rounded corners */
@@ -1110,7 +1150,7 @@ vertical-slider {
     }
 /* Deck A and Deck B Styling */
 .deck {
-    background: linear-gradient(to bottom, #fff, #eee);
+    background: linear-gradient(to bottom, #fff, #eee); /* Metallic white effect */
     color: #900;
     padding: 20px;
     border: 5px solid #900;
@@ -1124,10 +1164,10 @@ vertical-slider {
 
 /* Mixer Styling */
 .mixer {
-    background: linear-gradient(to bottom, #f8f8f8, #e0e0e0); /* Metallic white gradient */
+    background: linear-gradient(to bottom, #fff, #eee); /* Metallic white effect */
+    color: #900;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5); /* Subtle shadow for metallic effect */
-    color: #900;
     padding: 20px;
     border: 5px solid #900;
     box-shadow: 0 0 10px #000;
@@ -1289,7 +1329,7 @@ vertical-slider {
 }
 
 .deck {
-    flex-basis: 35%; /* Take up 45% of the container width */
+    flex-basis: 35%; /* Take up 35% of the container width */
     height: auto;
 }
 
@@ -1329,7 +1369,7 @@ vertical-slider {
 }
 
 .deck {
-    flex-basis: 30%; /* Adjust width for larger screens */
+    flex-basis: 35%; /* Adjust width for larger screens */
 }
 
 .performance-pad-container {

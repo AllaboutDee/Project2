@@ -19,6 +19,10 @@
   
  <!-- Header Section -->
     <header>
+        <div class="theme-controls">
+            <button id="switchTheme" class="button" aria-label="Switch Theme">SWITCH THEME</button>
+            <button id="customizeColour" class="button" aria-label="Customize Color">CUSTOMIZE COLOR</button>
+        </div>
         <div class="logo">
             <h1>DEE J PRO - Interactive DJ Mixer</h1>
         </div>
@@ -33,16 +37,11 @@
   
 <body>
     <main class="whole-body-container" id="wholeBody">
-        <div class="theme-controls">
-            <button id="switchTheme" class="button" aria-label="Switch Theme">SWITCH THEME</button>
-            <button id="customizeColour" class="button" aria-label="Customize Color">CUSTOMIZE COLOR</button>
-        </div>
-      
       <!-- DJ Interface Section -->
         <div class="dj-interface">
             <div class="dj-header-container">
                 <div class="waveform-header" id="waveformHeaderA" aria-label="Waveform Deck A"></div>
-                <h1>DEE J PRO: <br> Interactive DJ Mixer</h1>
+                <h1>DEE J PRO</h1>
                 <div class="waveform-header" id="waveformHeaderB" aria-label="Waveform Deck B"></div>
             </div>
           
@@ -78,7 +77,7 @@
                 <!-- Tempo Fader, Platter, and Wheel Controls -->
                 <div class="deck-controls-flex">
                     <fieldset class="tempo-fader" id="tempoFaderA">
-                        <legend>Tempo Control</legend>
+                        <legend>TEMPO</legend>
                         <label for="tempoA">TEMPO</label>
                         <input type="range" id="tempoA" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck A">
                     </fieldset>
@@ -292,7 +291,7 @@
                     </div>
 
                     <fieldset class="tempo-fader" id="tempoFaderB">
-                        <legend>Tempo Control</legend>
+                        <legend>TEMPO</legend>
                         <label for="tempoB">TEMPO</label>
                         <input type="range" id="tempoB" min="50" max="150" value="100">
                     </fieldset>
@@ -325,33 +324,37 @@
                     </fieldset>
                 </div>
             </section>
-        </section>
+    
 
-<!-- Music and Sampler Display Section -->
+            </section>
+            <!-- Music and Sampler Display Section -->
 <div class="music-sampler-display" id="musicSamplerDisplay">
 
     <!-- Sampler A Display -->
     <fieldset class="sampler-display" id="samplerDisplayA">
+        <h3>Sampler A Display</h3>
         <legend>Sampler A Display</legend>
     </fieldset>
 
     <!-- Music A Display -->
     <fieldset class="music-display" id="musicDisplayA">
+        <h3>Music A Display</h3>
         <legend>Music Display Deck A</legend>
     </fieldset>
 
     <!-- Music B Display -->
     <fieldset class="music-display" id="musicDisplayB">
+        <h3>Music B Display</h3>
         <legend>Music Display Deck B</legend>
     </fieldset>
 
     <!-- Sampler B Display -->
     <fieldset class="sampler-display" id="samplerDisplayB">
+        <h3>Sampler B Display</h3>
         <legend>Sampler B Display</legend>
     </fieldset>
 
 </div>    
-        </section>
 
     </main>
   
