@@ -21,7 +21,7 @@
     <header>
         <div class="theme-controls">
             <button id="switchTheme" class="button" aria-label="Switch Theme">SWITCH THEME</button>
-            <button id="customizeColour" class="button" aria-label="Customize Color">CUSTOMIZE COLOR</button>
+            <button id="customizeColour" class="button" aria-label="Customize Color">CUSTOMIZE COLOUR</button>
         </div>
         <div class="logo">
             <h1>DEE J PRO - Interactive DJ Mixer</h1>
@@ -79,7 +79,7 @@
                     <fieldset class="tempo-fader" id="tempoFaderA">
                         <legend>TEMPO</legend>
                         <label for="tempoA">TEMPO</label>
-                        <input type="range" id="tempoA" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck A">
+                        <input type="range" id="tempoA" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck A" orient="vertical">
                     </fieldset>
 
                     <div class="platter" id="platterA" aria-label="Platter for Deck A">
@@ -90,6 +90,7 @@
                         <legend>Wheel Controls</legend>
                         <button id="wheelScratchA" class="metallic-red" aria-label="Wheel Scratch for Deck A">WHEEL SCRATCH</button>
                         <button id="wheelNudgeA" class="metallic-red" aria-label="Wheel Nudge for Deck A">WHEEL NUDGE</button>
+                        <button id="wheelStopA" class="metallic-red" aria-label="Wheel Stop for Deck A">WHEEL STOP</button>
                     </fieldset>
                 </div>
 
@@ -199,22 +200,23 @@
     </div>
 
     <!-- Channel Faders and Master Light -->
-    <div class="channel-faders-Master-light-container">
-        <div class="channel-fader">
-            <label for="channelFaderA">Channel A Volume</label>
-            <input type="range" id="channelFaderA" min="0" max="1" step="0.01" value="0.5" class="vertical-slider" aria-label="Channel A volume fader">
-        </div>
-        <div class="master-light-placeholder">
-            <div class="light-display" aria-label="Master Light Display">Master Light</div>
-        </div>
-        <div class="channel-fader">
-            <label for="channelFaderB">Channel B Volume</label>
-            <input type="range" id="channelFaderB" min="0" max="1" step="0.01" value="0.5" class="vertical-slider" aria-label="Channel B volume fader">
-        </div>
+    <div class="volume-faders-container">
+        <fieldset class="volume-fader" id="channelAVolumeFader">
+            <legend>CHANNEL A VOLUME</legend>
+            <label for="channelAVolume">VOLUME</label>
+            <input type="range" id="channelAVolume" min="0" max="100" value="50" step="1" aria-label="Volume Fader for Channel A" orient="vertical">
+        </fieldset>
+        
+        <!-- Channel B Volume -->
+        <fieldset class="volume-fader" id="channelBVolumeFader">
+            <legend>CHANNEL B VOLUME</legend>
+            <label for="channelBVolume">VOLUME</label>
+            <input type="range" id="channelBVolume" min="0" max="100" value="50" step="1" aria-label="Volume Fader for Channel B" orient="vertical">
+        </fieldset>
     </div>
 
     <!-- Crossfader -->
-    <div class="crossfader-container">
+    <div class="crossfader-container>
         <label for="crossfader">Crossfader:</label>
         <input type="range" id="crossfader" min="0" max="100" value="50" class="horizontal-slider" aria-label="Crossfader control">
     </div>
@@ -282,18 +284,18 @@
                 <div class="deck-controls-flex">
                     <fieldset class="wheel-controls-container">
                         <legend>Wheel Controls</legend>
-                        <button id="wheelScratchB" class="metallic-red">WHEEL SCRATCH</button>
-                        <button id="wheelNudgeB" class="metallic-red">WHEEL NUDGE</button>
+                        <button id="wheelScratchB" class="metallic-red" aria-label="Wheel Scratch for Deck B">WHEEL SCRATCH</button>
+                        <button id="wheelNudgeB" class="metallic-red" aria-label="Wheel Nudge for Deck B">WHEEL NUDGE</button>
+                        <button id="wheelStopB" class="metallic-red" aria-label="Wheel Stop for Deck B">WHEEL STOP</button>
                     </fieldset>
 
                     <div class="platter" id="platterB">
                         <div class="platter-center" aria-label="Platter Center"></div>
                     </div>
-
                     <fieldset class="tempo-fader" id="tempoFaderB">
                         <legend>TEMPO</legend>
-                        <label for="tempoB">TEMPO</label>
-                        <input type="range" id="tempoB" min="50" max="150" value="100">
+                        <label for="tempoA">TEMPO</label>
+                        <input type="range" id="tempoA" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck B" orient="vertical">
                     </fieldset>
                     
                 </div>
