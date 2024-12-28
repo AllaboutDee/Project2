@@ -53,6 +53,18 @@ body {
     height: 50px;
 }
 
+/* Dark Gray Theme for DJ Set */
+.dark-gray-theme {
+    background: linear-gradient(to bottom, #333, #111); /* Dark gray gradient */
+    border: 5px solid #444; /* Dark gray border */
+}
+
+/* Dark Gray Theme for Decks and Mixer */
+.dark-gray-color {
+    background: linear-gradient(to bottom, #555, #333); /* Dark gray gradient */
+    border: 2px solid #444; /* Dark gray border */
+}
+
 /* Main Header Styles */
 header {
     background: linear-gradient(to bottom, #f00, #900); /* Metallic red gradient */
