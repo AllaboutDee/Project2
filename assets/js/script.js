@@ -183,6 +183,33 @@ crossfader.addEventListener("input", () => {
     audioDeckB.volume = crossfadeValue;
 });
 
+// Half and Double speed for Deck A and Deck B
+
+// Half-Speed Button for Deck A
+document.getElementById("halfSpeedA").addEventListener("click", () => {
+    audioDeckA.playbackRate = 0.5; // Set playback rate to half speed
+    console.log("Deck A playback rate set to half speed (0.5x)");
+});
+
+// Double-Speed Button for Deck A
+document.getElementById("doubleSpeedA").addEventListener("click", () => {
+    audioDeckA.playbackRate = 2.0; // Set playback rate to double speed
+    console.log("Deck A playback rate set to double speed (2x)");
+});
+
+// Half-Speed Button for Deck B
+document.getElementById("halfSpeedB").addEventListener("click", () => {
+    audioDeckB.playbackRate = 0.5; // Set playback rate to half speed
+    console.log("Deck B playback rate set to half speed (0.5x)");
+});
+
+// Double-Speed Button for Deck B
+document.getElementById("doubleSpeedB").addEventListener("click", () => {
+    audioDeckB.playbackRate = 2.0; // Set playback rate to double speed
+    console.log("Deck B playback rate set to double speed (2x)");
+});
+
+
 
 
 
