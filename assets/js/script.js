@@ -229,6 +229,97 @@ document.getElementById("doubleSpeedB").addEventListener("click", () => {
     }
 });
 
+// Store loop points for both decks
+let manualLoopInA = null;
+let manualLoopOutA = null;
+let manualLoopInB = null;
+let manualLoopOutB = null;
+
+// Flag to indicate whether manual loop is active
+let isManualLoopActiveA = false;
+let isManualLoopActiveB = false;
+
+// Variable to store the interval for manual loop checking
+let manualLoopIntervalA = null;
+let manualLoopIntervalB = null;
+
+// Manual Loop In for Deck A
+document.getElementById("manualLoopInA").addEventListener("click", () => {
+    manualLoopInA = audioDeckA.currentTime; // Store the current time as the In point
+    console.log("Manual Loop In A:", manualLoopInA);
+    // If loop is already active, toggle it off
+    if (isManualLoopActiveA) {
+        clearInterval(manualLoopIntervalA);
+        isManualLoopActiveA = false;
+        console.log("Manual loop deactivated for Deck A.");
+    } else {
+        isManualLoopActiveA = true;
+        console.log("Manual loop activated for Deck A.");
+    }
+});
+
+// Manual Loop Out for Deck A
+document.getElementById("manualLoopOutA").addEventListener("click", () => {
+    if (manualLoopInA !== null) {
+        manualLoopOutA = audioDeckA.currentTime; // Store the current time as the Out point
+        audioDeckA.currentTime = manualLoopInA; // Restart the track from the In point
+        audioDeckA.play(); // Start playing from the In point
+        console.log("Manual Loop Out A:", manualLoopOutA);
+        console.log("Looping between", manualLoopInA, "and", manualLoopOutA);
+
+        // Start the loop if it's not already active
+        if (isManualLoopActiveA) {
+            // Implement the looping behavior using setInterval
+            manualLoopIntervalA = setInterval(() => {
+                if (audioDeckA.currentTime >= manualLoopOutA) {
+                    audioDeckA.currentTime = manualLoopInA; // Reset to In point
+                }
+            }, 100); // Check every 100ms
+        }
+    } else {
+        console.log("Set Manual Loop In first for Deck A");
+    }
+});
+
+// Manual Loop In for Deck B
+document.getElementById("manualLoopInB").addEventListener("click", () => {
+    manualLoopInB = audioDeckB.currentTime; // Store the current time as the In point
+    console.log("Manual Loop In B:", manualLoopInB);
+    // If loop is already active, toggle it off
+    if (isManualLoopActiveB) {
+        clearInterval(manualLoopIntervalB);
+        isManualLoopActiveB = false;
+        console.log("Manual loop deactivated for Deck B.");
+    } else {
+        isManualLoopActiveB = true;
+        console.log("Manual loop activated for Deck B.");
+    }
+});
+
+// Manual Loop Out for Deck B
+document.getElementById("manualLoopOutB").addEventListener("click", () => {
+    if (manualLoopInB !== null) {
+        manualLoopOutB = audioDeckB.currentTime; // Store the current time as the Out point
+        audioDeckB.currentTime = manualLoopInB; // Restart the track from the In point
+        audioDeckB.play(); // Start playing from the In point
+        console.log("Manual Loop Out B:", manualLoopOutB);
+        console.log("Looping between", manualLoopInB, "and", manualLoopOutB);
+
+        // Start the loop if it's not already active
+        if (isManualLoopActiveB) {
+            // Implement the looping behavior using setInterval
+            manualLoopIntervalB = setInterval(() => {
+                if (audioDeckB.currentTime >= manualLoopOutB) {
+                    audioDeckB.currentTime = manualLoopInB; // Reset to In point
+                }
+            }, 100); // Check every 100ms
+        }
+    } else {
+        console.log("Set Manual Loop In first for Deck B");
+    }
+});
+
+
 
 
 
