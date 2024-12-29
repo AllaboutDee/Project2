@@ -81,9 +81,10 @@
                         <label for="tempoA">TEMPO</label>
                         <input type="range" id="tempoA" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck A" orient="vertical">
                     </fieldset>
+                    
 
-                    <div class="platter" id="platterA" aria-label="Platter for Deck A">
-                        <div class="platter-center"></div>
+                    <div class="jog-wheel" id="jogWheelA" aria-label="Platter for Deck A">
+                        <div class="jog-wheel-center"></div>
                     </div>
 
                     <fieldset class="wheel-controls-container">
@@ -116,7 +117,7 @@
                         <legend>Control Buttons</legend>
                         <button id="syncButtonA" class="button metallic-red" aria-label="Sync Button for Deck A">SYNC</button>
                         <button id="cueButtonA" class="button metallic-red" aria-label="Cue Button for Deck A">CUE</button>
-                        <button id="playButtonA" class="button metallic-red" aria-label="Play/Pause for Deck A">PLAY/PAUSE</button>
+                        <button id="playPauseMusicA" class="button metallic-red" aria-label="Play/Pause for Deck A">PLAY/PAUSE</button>
                     </fieldset>
                 </div>
             </section>
@@ -216,7 +217,7 @@
     </div>
 
     <!-- Crossfader -->
-    <div class="crossfader-container>
+    <div class="crossfader-container">
         <label for="crossfader">Crossfader:</label>
         <input type="range" id="crossfader" min="0" max="100" value="50" class="horizontal-slider" aria-label="Crossfader control">
     </div>
@@ -289,8 +290,8 @@
                         <button id="wheelStopB" class="metallic-red" aria-label="Wheel Stop for Deck B">WHEEL STOP</button>
                     </fieldset>
 
-                    <div class="platter" id="platterB">
-                        <div class="platter-center" aria-label="Platter Center"></div>
+                    <div class="jog-wheel" id="jogWheelB">
+                        <div class="jog-wheel-center" aria-label="jog-wheel Center"></div>
                     </div>
                     <fieldset class="tempo-fader" id="tempoFaderB">
                         <legend>TEMPO</legend>
@@ -306,7 +307,7 @@
                         <legend>Control Buttons</legend>
                         <button id="syncButtonB" class="button metallic-red">SYNC</button>
                         <button id="cueButtonB" class="button metallic-red">CUE</button>
-                        <button id="playButtonB" class="button metallic-red">PLAY/PAUSE</button>
+                        <button id="playButtonB" class="button metallic-red">PLAY / PAUSE</button>
                     </fieldset>
 
                     <fieldset class="performance-pad">
