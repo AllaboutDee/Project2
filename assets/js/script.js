@@ -320,13 +320,135 @@ document.getElementById("manualLoopOutB").addEventListener("click", () => {
 });
 
 
+// Store auto loop duration for Deck A
+let autoLoopDurationA = 4; // Default to 4 seconds
+
+// Get the auto loop button and dropdown for Deck A
+const autoLoopButtonA = document.getElementById("autoLoopInA");
+const autoLoopDropdownA = document.getElementById("autoLoopDropdownA");
+const autoLoopTimeSelectA = document.getElementById("autoLoopTimeA");
+
+// Variable to hold the interval for auto loop
+let autoLoopIntervalA = null;
+
+// Toggle the dropdown when the Auto Loop In button is clicked for Deck A
+autoLoopButtonA.addEventListener("click", () => {
+    // Toggle the visibility of the dropdown
+    if (autoLoopDropdownA.style.display === "none") {
+        autoLoopDropdownA.style.display = "block"; // Show the dropdown
+    } else {
+        autoLoopDropdownA.style.display = "none"; // Hide the dropdown
+    }
+});
+
+// Update the selected loop time when the user selects a duration from the dropdown for Deck A
+autoLoopTimeSelectA.addEventListener("change", (event) => {
+    autoLoopDurationA = parseInt(event.target.value); // Set the loop duration (in seconds)
+    console.log("Auto Loop Duration for Deck A set to", autoLoopDurationA, "seconds");
+});
+
+// Auto Loop functionality for Deck A (start the loop based on selected duration)
+let autoLoopInA = null;
+let autoLoopOutA = null;
+
+autoLoopButtonA.addEventListener("click", () => {
+    // If the dropdown is hidden, start the loop
+    if (autoLoopDropdownA.style.display === "none") {
+        autoLoopInA = audioDeckA.currentTime; // Store the current time as the In point
+        console.log("Auto Loop In A:", autoLoopInA);
+        
+        // Set the loop out point based on the selected duration
+        autoLoopOutA = autoLoopInA + autoLoopDurationA; // Set the loop out point based on selected duration
+        console.log("Auto Loop Out A:", autoLoopOutA);
+        
+        // Start the loop
+        audioDeckA.currentTime = autoLoopInA; // Restart the track from the In point
+        audioDeckA.play(); // Play the track
+        
+        // Set interval to loop between In and Out points
+        if (autoLoopIntervalA) clearInterval(autoLoopIntervalA); // Clear any existing interval before setting a new one
+        
+        autoLoopIntervalA = setInterval(() => {
+            if (audioDeckA.currentTime >= autoLoopOutA) {
+                audioDeckA.currentTime = autoLoopInA; // Reset to In point
+            }
+        }, 100); // Check every 100ms
+    }
+});
+
+// Stop the loop when Auto Loop Out button is clicked for Deck A
+const autoLoopOutButtonA = document.getElementById("autoLoopOutA");
+autoLoopOutButtonA.addEventListener("click", () => {
+    if (autoLoopIntervalA) {
+        clearInterval(autoLoopIntervalA); // Stop the loop
+        autoLoopIntervalA = null;
+        console.log("Auto Loop Out A: Stopped");
+    }
+});
 
 
+// Store auto loop duration for Deck B
+let autoLoopDurationB = 4; // Default to 4 seconds
 
+// Get the auto loop button and dropdown
+const autoLoopButtonB = document.getElementById("autoLoopInB");
+const autoLoopDropdownB = document.getElementById("autoLoopDropdownB");
+const autoLoopTimeSelectB = document.getElementById("autoLoopTimeB");
 
+// Variable to hold the interval for auto loop
+let autoLoopIntervalB = null;
 
+// Toggle the dropdown when the Auto Loop In button is clicked
+autoLoopButtonB.addEventListener("click", () => {
+    // Toggle the visibility of the dropdown
+    if (autoLoopDropdownB.style.display === "none") {
+        autoLoopDropdownB.style.display = "block"; // Show the dropdown
+    } else {
+        autoLoopDropdownB.style.display = "none"; // Hide the dropdown
+    }
+});
 
+// Update the selected loop time when the user selects a duration from the dropdown
+autoLoopTimeSelectB.addEventListener("change", (event) => {
+    autoLoopDurationB = parseInt(event.target.value); // Set the loop duration (in seconds)
+    console.log("Auto Loop Duration for Deck B set to", autoLoopDurationB, "seconds");
+});
 
+// Auto Loop functionality for Deck B (start the loop based on selected duration)
+let autoLoopInB = null;
+let autoLoopOutB = null;
 
+autoLoopButtonB.addEventListener("click", () => {
+    // If the dropdown is hidden, start the loop
+    if (autoLoopDropdownB.style.display === "none") {
+        autoLoopInB = audioDeckB.currentTime; // Store the current time as the In point
+        console.log("Auto Loop In B:", autoLoopInB);
+        
+        // Set the loop out point based on the selected duration
+        autoLoopOutB = autoLoopInB + autoLoopDurationB; // Set the loop out point based on selected duration
+        console.log("Auto Loop Out B:", autoLoopOutB);
+        
+        // Start the loop
+        audioDeckB.currentTime = autoLoopInB; // Restart the track from the In point
+        audioDeckB.play(); // Play the track
+        
+        // Set interval to loop between In and Out points
+        if (autoLoopIntervalB) clearInterval(autoLoopIntervalB); // Clear any existing interval before setting a new one
+        
+        autoLoopIntervalB = setInterval(() => {
+            if (audioDeckB.currentTime >= autoLoopOutB) {
+                audioDeckB.currentTime = autoLoopInB; // Reset to In point
+            }
+        }, 100); // Check every 100ms
+    }
+});
 
-
+// Stop the loop when Auto Loop Out button is clicked
+const autoLoopOutButtonB = document.getElementById("autoLoopOutB");
+autoLoopOutButtonB.addEventListener("click", () => {
+    if (autoLoopIntervalB) {
+        clearInterval(autoLoopIntervalB); // Stop the loop
+        autoLoopIntervalB = null;
+        console.log("Auto Loop Out B: Stopped");
+    }
+});
