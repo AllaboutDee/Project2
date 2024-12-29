@@ -16,7 +16,9 @@ fieldset {
     text-align: center; /* Ensures legend aligns centrally within the fieldset */
 }
 
-
+audio {
+    display: none;
+}
 .wholeBody {
     position: relative;
     width: 100%;
@@ -1286,7 +1288,7 @@ header nav ul li a:focus {
 
 
 
-/* 1. iPad (600px and up) */
+* 1. iPad (600px and up) */
 @media (min-width: 600px) {
     body {
         font-size: 16px; /* Increase font size for iPad */
