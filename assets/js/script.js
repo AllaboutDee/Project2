@@ -121,8 +121,67 @@ syncButtonB.addEventListener("click", () => {
     }
 });
 
+// Cue Functionality for Deck A
+const cuePointsA = [5, 15, 45, 60]; // Seconds
 
+document.getElementById("cue1A").addEventListener("click", () => {
+    audioDeckA.currentTime = cuePointsA[0];
+});
 
+document.getElementById("cue2A").addEventListener("click", () => {
+    audioDeckA.currentTime = cuePointsA[1];
+});
+
+document.getElementById("cue3A").addEventListener("click", () => {
+    audioDeckA.currentTime = cuePointsA[2];
+});
+
+document.getElementById("cue4A").addEventListener("click", () => {
+    audioDeckA.currentTime = cuePointsA[3];
+});
+
+// Cue Functionality for Deck B
+
+const cuePointsB = [5, 15, 45, 60]; // Seconds
+
+document.getElementById("cue1B").addEventListener("click", () => {
+    audioDeckB.currentTime = cuePointsB[0];
+});
+
+document.getElementById("cue2B").addEventListener("click", () => {
+    audioDeckB.currentTime = cuePointsB[1];
+});
+
+document.getElementById("cue3B").addEventListener("click", () => {
+    audioDeckB.currentTime = cuePointsB[2];
+});
+
+document.getElementById("cue4B").addEventListener("click", () => {
+    audioDeckB.currentTime = cuePointsB[3];
+});
+
+// Channel A Volumefor Deck A and Deck B and Crossfader
+
+const channelAVolume = document.getElementById("channelAVolume");
+channelAVolume.addEventListener("input", () => {
+    const volume = channelAVolume.value / 100; // Normalize value to 0-1
+    audioDeckA.volume = volume;
+});
+
+const channelBVolume = document.getElementById("channelBVolume");
+channelBVolume.addEventListener("input", () => {
+    const volume = channelBVolume.value / 100; // Normalize value to 0-1
+    audioDeckB.volume = volume;
+});
+
+const crossfader = document.getElementById("crossfader");
+crossfader.addEventListener("input", () => {
+    const crossfadeValue = crossfader.value / 100; // Normalize value to 0-1
+    
+    // Adjust Channel A and Channel B volume proportionally
+    audioDeckA.volume = 1 - crossfadeValue;
+    audioDeckB.volume = crossfadeValue;
+});
 
 
 
