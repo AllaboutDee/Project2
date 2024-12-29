@@ -452,3 +452,29 @@ autoLoopOutButtonB.addEventListener("click", () => {
         console.log("Auto Loop Out B: Stopped");
     }
 });
+
+// Select the tempo fader for Deck A
+const tempoFaderA = document.getElementById("tempoFaderA");
+
+// Event listener to adjust the playback rate of Deck A
+tempoFaderA.addEventListener("input", () => {
+    const tempoValue = tempoFaderA.value; // Get the current value from the fader (50-150)
+    const playbackRate = tempoValue / 100; // Normalize to 0.5x - 1.5x playback rate
+    audioDeckA.playbackRate = playbackRate; // Set the playback rate for Deck A
+
+    // Log for debugging
+    console.log(`Deck A Tempo: ${playbackRate}x (Fader Value: ${tempoValue})`);
+});
+
+// Select the tempo fader for Deck B
+const tempoFaderB = document.getElementById("tempoFaderB");
+
+// Event listener to adjust the playback rate of Deck B
+tempoFaderB.addEventListener("input", () => {
+    const tempoValue = tempoFaderB.value; // Get the current value from the fader (50-150)
+    const playbackRate = tempoValue / 100; // Normalize to 0.5x - 1.5x playback rate
+    audioDeckB.playbackRate = playbackRate; // Set the playback rate for Deck B
+
+    // Log for debugging
+    console.log(`Deck B Tempo: ${playbackRate}x (Fader Value: ${tempoValue})`);
+});

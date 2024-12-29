@@ -76,10 +76,11 @@
 
                 <!-- Tempo Fader, Platter, and Wheel Controls -->
                 <div class="deck-controls-flex">
-                    <fieldset class="tempo-fader" id="tempoFaderA">
+
+                    <fieldset class="tempo-fader" id="tempoFaderAContainer">
                         <legend>TEMPO</legend>
-                        <label for="tempoA">TEMPO</label>
-                        <input type="range" id="tempoA" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck A" orient="vertical">
+                        <label for="tempoFaderA">TEMPO</label>
+                        <input type="range" id="tempoFaderA" class="tempo-fader" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck A">
                     </fieldset>
                     
 
@@ -307,12 +308,11 @@
                     <div class="jog-wheel" id="jogWheelB">
                         <div class="jog-wheel-center" aria-label="jog-wheel Center"></div>
                     </div>
-                    <fieldset class="tempo-fader" id="tempoFaderB">
+                    <fieldset class="tempo-fader" id="tempoFaderBContainer">
                         <legend>TEMPO</legend>
-                        <label for="tempoA">TEMPO</label>
-                        <input type="range" id="tempoA" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck B" orient="vertical">
+                        <label for="tempoFaderB">TEMPO</label>
+                        <input type="range" id="tempoFaderB" class="tempo-fader" min="50" max="150" value="100" step="1" aria-label="Tempo Fader for Deck B">
                     </fieldset>
-                    
                 </div>
 
                 <!-- Performance Pad and Control Buttons -->
