@@ -63,12 +63,57 @@ playPauseButtonA.addEventListener("click", () => {
         audioDeckA.play();
         isPlayingA = true;
         playPauseButtonA.textContent = "PAUSE";
+        startJogWheelSpinning(jogWheelA);  // Start jog-wheel spinning when music plays
     } else {
         audioDeckA.pause();
         isPlayingA = false;
         playPauseButtonA.textContent = "PLAY";
+        stopJogWheelSpinning(jogWheelA);   // Stop jog-wheel spinning when music is paused
     }
 });
+
+// Play/Pause for Deck B
+let isPlayingB = false;
+playPauseButtonB.addEventListener("click", () => {
+    if (audioDeckB.paused) {
+        audioDeckB.play();
+        isPlayingB = true;
+        playPauseButtonB.textContent = "PAUSE";
+        startJogWheelSpinning(jogWheelB);  // Start jog-wheel spinning when music plays
+    } else {
+        audioDeckB.pause();
+        isPlayingB = false;
+        playPauseButtonB.textContent = "PLAY";
+        stopJogWheelSpinning(jogWheelB);   // Stop jog-wheel spinning when music is paused
+    }
+});
+
+// Function to start spinning the jog wheel
+const startJogWheelSpinning = (wheelElement) => {
+    // Only spin when the track is playing
+    wheelElement.style.animation = "spin 2s linear infinite";
+};
+
+// Function to stop spinning the jog wheel
+const stopJogWheelSpinning = (wheelElement) => {
+    // Stop the animation when the track is paused
+    wheelElement.style.animation = "none";
+};
+
+// CSS for spinning animation (you can add this inside a <style> tag or in your external stylesheet)
+const style = document.createElement("style");
+style.innerHTML = `
+    .jog-wheel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+`;
+document.head.appendChild(style);
 
 // Volume Control for Deck A
 volumeSliderA.addEventListener("input", (event) => {
@@ -82,20 +127,6 @@ fileInputB.addEventListener("change", (event) => {
         const url = URL.createObjectURL(file);
         audioDeckB.src = url;
         audioDeckB.load();
-    }
-});
-
-// Play/Pause for Deck B
-let isPlayingB = false;
-playPauseButtonB.addEventListener("click", () => {
-    if (audioDeckB.paused) {
-        audioDeckB.play();
-        isPlayingB = true;
-        playPauseButtonB.textContent = "PAUSE";
-    } else {
-        audioDeckB.pause();
-        isPlayingB = false;
-        playPauseButtonB.textContent = "PLAY";
     }
 });
 
@@ -478,3 +509,4 @@ tempoFaderB.addEventListener("input", () => {
     // Log for debugging
     console.log(`Deck B Tempo: ${playbackRate}x (Fader Value: ${tempoValue})`);
 });
+
