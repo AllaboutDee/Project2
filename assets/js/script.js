@@ -185,28 +185,48 @@ crossfader.addEventListener("input", () => {
 
 // Half and Double speed for Deck A and Deck B
 
-// Half-Speed Button for Deck A
+// Toggle Half-Speed for Deck A
 document.getElementById("halfSpeedA").addEventListener("click", () => {
-    audioDeckA.playbackRate = 0.5; // Set playback rate to half speed
-    console.log("Deck A playback rate set to half speed (0.5x)");
+    if (audioDeckA.playbackRate === 0.5) {
+        audioDeckA.playbackRate = 1.0; // Reset to normal speed
+        console.log("Deck A playback rate reset to normal (1x)");
+    } else {
+        audioDeckA.playbackRate = 0.5; // Set to half speed
+        console.log("Deck A playback rate set to half speed (0.5x)");
+    }
 });
 
-// Double-Speed Button for Deck A
+// Toggle Double-Speed for Deck A
 document.getElementById("doubleSpeedA").addEventListener("click", () => {
-    audioDeckA.playbackRate = 2.0; // Set playback rate to double speed
-    console.log("Deck A playback rate set to double speed (2x)");
+    if (audioDeckA.playbackRate === 2.0) {
+        audioDeckA.playbackRate = 1.0; // Reset to normal speed
+        console.log("Deck A playback rate reset to normal (1x)");
+    } else {
+        audioDeckA.playbackRate = 2.0; // Set to double speed
+        console.log("Deck A playback rate set to double speed (2x)");
+    }
 });
 
-// Half-Speed Button for Deck B
+// Toggle Half-Speed for Deck B
 document.getElementById("halfSpeedB").addEventListener("click", () => {
-    audioDeckB.playbackRate = 0.5; // Set playback rate to half speed
-    console.log("Deck B playback rate set to half speed (0.5x)");
+    if (audioDeckB.playbackRate === 0.5) {
+        audioDeckB.playbackRate = 1.0; // Reset to normal speed
+        console.log("Deck B playback rate reset to normal (1x)");
+    } else {
+        audioDeckB.playbackRate = 0.5; // Set to half speed
+        console.log("Deck B playback rate set to half speed (0.5x)");
+    }
 });
 
-// Double-Speed Button for Deck B
+// Toggle Double-Speed for Deck B
 document.getElementById("doubleSpeedB").addEventListener("click", () => {
-    audioDeckB.playbackRate = 2.0; // Set playback rate to double speed
-    console.log("Deck B playback rate set to double speed (2x)");
+    if (audioDeckB.playbackRate === 2.0) {
+        audioDeckB.playbackRate = 1.0; // Reset to normal speed
+        console.log("Deck B playback rate reset to normal (1x)");
+    } else {
+        audioDeckB.playbackRate = 2.0; // Set to double speed
+        console.log("Deck B playback rate set to double speed (2x)");
+    }
 });
 
 
