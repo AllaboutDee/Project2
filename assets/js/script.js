@@ -1,4 +1,3 @@
-
 // Theme Switching and Customization
 const switchThemeButton = document.getElementById('switchTheme');
 const customizeColourButton = document.getElementById('customizeColour'); // Corrected ID
@@ -50,11 +49,16 @@ const volumeSliderB = document.getElementById("channelBVolume");
 fileInputA.addEventListener("change", (event) => {
     const file = event.target.files[0];
     if (file) {
-        const url = URL.createObjectURL(file);
-        audioDeckA.src = url;
-        audioDeckA.load();
+        try {
+            const url = URL.createObjectURL(file);
+            audioDeckA.src = url;
+            audioDeckA.load();
+        } catch (error) {
+            console.error("Error loading audio file:", error);
+        }
     }
 });
+
 
 // Play/Pause for Deck A
 let isPlayingA = false;

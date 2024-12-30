@@ -271,8 +271,8 @@ header nav ul li a:focus {
 
 
 .equalizer label {
-    margin-bottom: 5px;red
-    color: #d75b5b; /* White text color */
+    margin-bottom: 5px;
+    color: #900; /* metallic red color */
 }
 
 .equalizer input[type="range"] {
@@ -889,15 +889,9 @@ header nav ul li a:focus {
     }
 
 }keyframes scratch {
-    0% {
-        transform: rotate(-10deg);
-    }
-    50% {
-        transform: rotate(10deg);
-    }
-    100% {
-        transform: rotate(-10deg);
-    }
+    0% { transform: rotate(-10deg);}
+    50% { transform: rotate(10deg);}
+    100% {transform: rotate(-10deg);}
 }
 
 /* Platter Center Styling */
