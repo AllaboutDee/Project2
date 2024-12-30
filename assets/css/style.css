@@ -2,12 +2,25 @@
 /* Font Awesome for the burger icon */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    line-height: 1.6;
     background: linear-gradient(to bottom, #eee, #bbb);
     color: #333;
+}
+
+
+
+/* Main Content Styling */
+.main-content {
+    max-width: 1200px; /* Limit content width for better readability */
+    margin: 0 auto;
+    padding: 40px 20px; /* More breathing room */
+    background: linear-gradient(to bottom, #eee, #bbb);
+    border-radius: 8px; /* Smooth corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
 }
 
 
@@ -20,6 +33,138 @@ header {
     align-items: center;
     padding: 20px; /* Double the padding for increased height */
     height: 120px; /* Fixed height for consistency */
+}
+
+header .logo {
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50% ); /* Adjust for perfect centering */
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 80px; /* Slightly larger font size for prominence */
+    font-size: clamp(2rem, 5vw, 80px);
+}
+
+header nav {
+    margin-left: auto; /* Push the nav bar to the far right */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Arrange navigation items horizontally */
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Space between navigation items */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove underlines */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background-color: #555; /* Button background color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+
+/* Section Headings */
+h1, h2 {
+    color: #070707; /* Vibrant accent color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsive title size */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add depth */
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Paragraphs and Lists */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Buttons and Links */
+a {
+    color: #ffcc00; /* Bright gold color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffcc00;
+}
+
+/* Sections Styling */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #eee, #bbb);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+}
+
+
+header {
+    background: linear-gradient(to bottom, #f00, #900); /* Metallic red gradient */
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Lower z-index than .theme-controls */
+    display: flex;
+    justify-content: space-between; /* Space between nav and logo */
+    align-items: center;
+    padding: 20px; /* Double the padding for increased height */
+    height: 100px; /* Fixed height for consistency */
 }
 
 header .logo {
@@ -82,3 +227,135 @@ footer {
     padding: 0 15px;
     color: #ffffff;
 }
+
+@media screen and (max-width: 767px) {
+    #logo {
+        font-size: 2rem;
+    }
+
+    .nav-toggle-label {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 2rem;
+        cursor: pointer;           
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #b8f2f6;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 2px 2px #3a3a3a;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    #nav-toggle:checked + .nav-toggle-label + nav #menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #cover-text {
+        font-size: 0.9rem;
+        width: 90%;
+        right: 5%;
+        left:5%;
+        top: 20px;
+        padding: 15px;
+    }
+}
+
+/* Responsive gallery columns */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
+/* Navbar toggle for mobile */
+.nav-toggle-label {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px; /* Adjust this value to move it left */
+    margin-right: 1rem;
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+    .nav-toggle-label {
+        display: block;
+        right: 40px; /* Adjust this value to move it further left */
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #b8f2f6;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 2px 2px #3a3a3a;
+        padding: 1rem 0;
+    }
+
+    #nav-toggle:checked + .nav-toggle-label + nav #menu {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 2.8rem;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        #menu a:hover {
+            border-bottom: 1px solid #3a3a3a;
+        }
+    
+        #photos {
+            column-count: 4;
+        }
+    }
+    
+    @media screen and (min-width: 1200px) {  
+        #logo {
+            font-size: 3.5rem;
+        }
+    
