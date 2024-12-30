@@ -24,17 +24,15 @@ audio {
     display: none;
 }
 
-/* end of code */
-.wholeBody {
+
+.wholeBody, .whole-body-container {
     position: relative;
     width: 100%;
-}
-
-.whole-body-container {
-    position: relative;
     overflow: hidden;
-    padding-top: 3rem; /* Prevent overlap with theme controls */
+    padding-top: 3rem;
 }
+/* end of code */
+
 
 header {
     background: linear-gradient(to bottom, #f00, #900); /* Metallic red gradient */
@@ -1265,7 +1263,7 @@ footer {
 
 /*------------------RESPONSIVE---------------------*/
 
-/* 1. iPad (600px and up) */
+* 1. iPad (600px and up) */
 @media (min-width: 600px) {
     body {
         font-size: 16px; /* Increase font size for iPad */

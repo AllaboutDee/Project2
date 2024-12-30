@@ -1,4 +1,5 @@
 
+import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
 // Theme Switching and Customization
 const switchThemeButton = document.getElementById('switchTheme');
 const customizeColourButton = document.getElementById('customizeColour'); // Corrected ID
@@ -510,5 +511,5 @@ tempoFaderB.addEventListener("input", () => {
     console.log(`Deck B Tempo: ${playbackRate}x (Fader Value: ${tempoValue})`);
 });
 
-// draft code for wavesurfer
 
+// Ensure WaveSurfer is loaded
