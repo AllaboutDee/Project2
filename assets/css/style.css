@@ -24,56 +24,6 @@ body {
 }
 
 
-header {
-    background: linear-gradient(to bottom, #f00, #900); /* Metallic red gradient */
-    position: relative; /* Ensure proper stacking context */
-    z-index: 1; /* Lower z-index than .theme-controls */
-    display: flex;
-    justify-content: space-between; /* Space between nav and logo */
-    align-items: center;
-    padding: 20px; /* Double the padding for increased height */
-    height: 120px; /* Fixed height for consistency */
-}
-
-header .logo {
-    position: absolute;
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50% ); /* Adjust for perfect centering */
-}
-
-header .logo h1 {
-    margin: 0;
-    font-size: 80px; /* Slightly larger font size for prominence */
-    font-size: clamp(2rem, 5vw, 80px);
-}
-
-header nav {
-    margin-left: auto; /* Push the nav bar to the far right */
-}
-
-header nav ul {
-    list-style: none;
-    display: flex; /* Arrange navigation items horizontally */
-    margin: 0;
-    padding: 0;
-    gap: 15px; /* Space between navigation items */
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none; /* Remove underlines */
-    padding: 10px 15px; /* Add padding for clickable area */
-    border-radius: 5px; /* Rounded corners for buttons */
-    background-color: #555; /* Button background color */
-    transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
-}
-
-header nav ul li a:hover,
-header nav ul li a:focus {
-    background-color: #ffcc00;
-    color: #333;
-}
-
 
 /* Section Headings */
 h1, h2 {
