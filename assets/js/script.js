@@ -510,3 +510,5 @@ tempoFaderB.addEventListener("input", () => {
     console.log(`Deck B Tempo: ${playbackRate}x (Fader Value: ${tempoValue})`);
 });
 
+// draft code for wavesurfer
+

@@ -1,3 +1,7 @@
+/* Font Awesome for the burger icon */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -48,7 +52,7 @@ header {
 header .logo {
     position: absolute;
     left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for perfect centering */
+    transform: translateX(-50% ); /* Adjust for perfect centering */
 }
 
 header .logo h1 {
@@ -196,6 +200,7 @@ header nav ul li a:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     font-weight: bold;
 }
+
 
 .deck {
     display: flex;
@@ -721,7 +726,7 @@ header nav ul li a:focus {
     background: linear-gradient(to bottom, #f00, #900);
     padding: 10px;
     border-radius: 5px;
-    width: 20%; /* 20% width of container */
+    width: 10%; /* 10% width of container */
     box-sizing: border-box;
 }
 
@@ -788,7 +793,7 @@ header nav ul li a:focus {
     width: 70%; /* Relative width for responsiveness */
     max-width: 100px;
     aspect-ratio: 1; /* Square buttons */
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     background: linear-gradient(to bottom, #f00, #900);
     color: #fff;
@@ -1104,11 +1109,6 @@ header nav ul li a:focus {
     box-sizing: border-box;
 }
 
-.wheel-controls-container {
-    
-}
-
-
 /* Control Buttons */
 .control-buttons {
     display: flex;
@@ -1128,7 +1128,8 @@ header nav ul li a:focus {
 .control-buttons .button {
     width: 100%; /* Stretch button to parent width */
     aspect-ratio: 1; /* Ensure square shape */
-    font-size: 10px;
+    font-size: 14px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -1251,39 +1252,29 @@ header nav ul li a:focus {
     line-height: 1;
 }
 
-/* Footer Styles */
-.main-footer {
-    background-color: #222;
-    color: white;
+/* Footer */
+footer {
+    background: linear-gradient(to bottom, #f00, #900); /* Metallic red gradient */
+    color: #ffffff;
     padding: 20px 0;
     text-align: center;
 }
 
-.main-footer .footer-content {
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
-.main-footer .footer-content p {
-    margin: 0;
-    font-size: 14px;
+#social-networks i {
+    font-size: 160%;
+    padding: 0 15px;
+    color: #ffffff;
 }
 
-.main-footer .social-links {
-    margin-top: 10px;
-}
 
-.main-footer .social-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
-}
-
-.main-footer .social-links a:hover {
-    color: #ffcc00;
-}
 
 
 /*------------------RESPONSIVE---------------------*/
