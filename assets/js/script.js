@@ -1,5 +1,4 @@
 
-import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
 // Theme Switching and Customization
 const switchThemeButton = document.getElementById('switchTheme');
 const customizeColourButton = document.getElementById('customizeColour'); // Corrected ID
@@ -108,6 +107,7 @@ style.innerHTML = `
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: spin 2s linear infinite; /* Applying spin animation */
     }
     @keyframes spin {
         from { transform: rotate(0deg); }
@@ -192,7 +192,7 @@ document.getElementById("cue4B").addEventListener("click", () => {
     audioDeckB.currentTime = cuePointsB[3];
 });
 
-// Channel A Volumefor Deck A and Deck B and Crossfader
+// Channel A Volume for Deck A and Deck B and Crossfader
 
 const channelAVolume = document.getElementById("channelAVolume");
 channelAVolume.addEventListener("input", () => {
@@ -274,7 +274,7 @@ let isManualLoopActiveB = false;
 // Variable to store the interval for manual loop checking
 let manualLoopIntervalA = null;
 let manualLoopIntervalB = null;
-
+autoLoopDurationA
 // Manual Loop In for Deck A
 document.getElementById("manualLoopInA").addEventListener("click", () => {
     manualLoopInA = audioDeckA.currentTime; // Store the current time as the In point

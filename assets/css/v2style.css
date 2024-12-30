@@ -1263,45 +1263,6 @@ footer {
 
 /*------------------RESPONSIVE---------------------*/
 
-* 1. iPad (600px and up) */
-@media (min-width: 600px) {
-    body {
-        font-size: 16px; /* Increase font size for iPad */
-    }
-
-    header, .dj-interface, .music-selection {
-        flex-direction: row; /* Horizontal layout on iPad */
-        justify-content: space-between;
-    }
-
-    .music-control, .control-buttons {
-        width: 48%; /* 50% width for controls on iPad */
-        margin-bottom: 10px;
-    }
-
-    .track-select, .file-input {
-        width: 80%; /* Slightly wider input fields */
-    }
-
-    
-}
-
-/* 2. Tablet/iPad Mini (768px and up) */
-@media (min-width: 768px) {
-    .music-control, .control-buttons {
-        width: 45%; /* Adjust control width */
-    }
-
-    .vertical-slider, .horizontal-slider {
-        height: 30px; /* Adjust slider size */
-        width: 50%; /* Adjust width on larger tablets */
-    }
-
-    .performance-pad-container {
-        flex-direction: row; /* Align pads in a row */
-        gap: 20px;
-    }
-}
 
 @media (max-width: 768px) {
     .dj-set {

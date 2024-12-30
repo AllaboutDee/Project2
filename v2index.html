@@ -16,7 +16,7 @@
       }
     </script>
 </head>
-
+<body>
 <!-- Header Section -->
     <header>
         <div class="theme-controls">
@@ -35,21 +35,19 @@
         </nav>
     </header>
   
-<body>
     <main class="whole-body-container" id="wholeBody">
       <!-- DJ Interface Section -->
         <div class="dj-interface">
             <div class="dj-header-container">
-                <div class="waveform-header" id="waveformHeaderA" aria-label="Waveform Deck A"></div>
+                <div class="waveform-header" id="waveformHeaderA" aria-hidden="true"></div>
                 <h1>DEE J PRO</h1>
-                <div class="waveform-header" id="waveformHeaderB" aria-label="Waveform Deck B"></div>
+                <div class="waveform-header" id="waveformHeaderB" aria-hidden="true"></div>
             </div>
           
         <section class="dj-set" id="djSet">
             <!-- Deck A -->
             <section class="deck" id="deckA">
                 <h2>DECK A</h2>
-                <div class="waveform" id="waveformA" aria-label="Waveform for Deck A"></div>
                 
                 <!-- Pitch Control and Touchstrip -->
                 <div class="touchstrip-pitch-controls">
@@ -62,8 +60,8 @@
                     <fieldset class="touchstrip" id="touchstripA">
                         <legend>Touchstrip and FX Controls</legend>
                         <div class="touchstrip-row">
-                            <div class="touchstrip-bar" id="touchstripBarA" aria-label="Touchstrip Bar for Deck A"></div>
-                            <button id="beatsButtonA" class="metallic-red" aria-label="Beats Button for Deck A">BEATS</button>
+                            <div class="touchstrip-bar" id="touchstripBarA" aria-label="Jump to section of track on Deck A" ></div>
+                            <button id="beatsButtonA" class="metallic-red" aria-label="This is the Beats Button for Deck A">BEATS</button>
                         </div>
                         <div class="fx-buttons-row">
                             <button id="fx1ButtonA" class="metallic-red" aria-label="FX1 Button for Deck A">FX1</button>
@@ -84,8 +82,8 @@
                     </fieldset>
                     
 
-                    <div class="jog-wheel" id="jogWheelA" aria-label="Platter for Deck A">
-                        <div class="jog-wheel-center"></div>
+                    <div class="jog-wheel" id="jogWheelA" aria-hidden="true">
+                        <div class="jog-wheel-center" aria-hidden="true"></div>
                     </div>
 
                     <fieldset class="wheel-controls-container">
@@ -214,14 +212,14 @@
         <fieldset class="volume-fader" id="channelAVolumeFader">
             <legend>CHANNEL A VOLUME</legend>
             <label for="channelAVolume">VOLUME</label>
-            <input type="range" id="channelAVolume" min="0" max="100" value="50" step="1" aria-label="Volume Fader for Channel A" orient="vertical">
+            <input type="range" id="channelAVolume" min="0" max="100" value="50" step="1" aria-label="Channel A Volume Fader for Deck A">
         </fieldset>
         
         <!-- Channel B Volume -->
         <fieldset class="volume-fader" id="channelBVolumeFader">
             <legend>CHANNEL B VOLUME</legend>
             <label for="channelBVolume">VOLUME</label>
-            <input type="range" id="channelBVolume" min="0" max="100" value="50" step="1" aria-label="Volume Fader for Channel B" orient="vertical">
+            <input type="range" id="channelBVolume" min="0" max="100" value="50" step="1" aria-label="Channel B Volume Fader for Deck B">
         </fieldset>
     </div>
 
@@ -271,14 +269,13 @@
 <!-- Deck B -->
             <section class="deck" id="deckB">
                 <h2>DECK B</h2>
-                <div class="waveform" id="waveformB" aria-label="Waveform for Deck B"></div>
 
                 <!-- Pitch Control and Touchstrip -->
                 <div class="touchstrip-pitch-controls">
                     <fieldset class="touchstrip" id="touchstripB">
                         <legend>Touchstrip and FX Controls</legend>
                         <div class="touchstrip-row">
-                            <div class="touchstrip-bar" id="touchstripBarB" aria-label="Touchstrip Bar for Deck B"></div>
+                            <div class="touchstrip-bar" id="touchstripBarB" aria-label="Jump to section of track on Deck B"></div>
                             <button id="beatsButtonB" class="metallic-red">BEATS</button>
                         </div>
                         <div class="fx-buttons-row">
@@ -306,7 +303,7 @@
                     </fieldset>
 
                     <div class="jog-wheel" id="jogWheelB">
-                        <div class="jog-wheel-center" aria-label="jog-wheel Center"></div>
+                        <div class="jog-wheel-center" aria-hidden="true"></div>
                     </div>
                     <fieldset class="tempo-fader" id="tempoFaderBContainer">
                         <legend>TEMPO</legend>
@@ -357,28 +354,28 @@
 
     <!-- Sampler A Display -->
     <fieldset class="sampler-display" id="samplerDisplayA">
-        <h3>Sampler A Display</h3>
         <legend>Sampler A Display</legend>
+        <h3>Sampler A Display</h3>
     </fieldset>
 
     <!-- Music A Display -->
     <fieldset class="music-display" id="musicDisplayA">
-        <h3>Music A Display</h3>
         <legend>Music Display Deck A</legend>
+        <h3>Music A Display</h3>
     </fieldset>
 
     <!-- Music B Display -->
     <fieldset class="music-display" id="musicDisplayB">
-        <h3>Music B Display</h3>
         <legend>Music Display Deck B</legend>
+        <h3>Music B Display</h3>
     </fieldset>
 
     <!-- Sampler B Display -->
     <fieldset class="sampler-display" id="samplerDisplayB">
-        <h3>Sampler B Display</h3>
         <legend>Sampler B Display</legend>
+        <h3>Sampler B Display</h3>
     </fieldset>
-
+</div>
 </div>    
 
 </main>
@@ -386,7 +383,6 @@
 <!-- Footer -->
 <footer>
     <ul id="social-networks">
-        <br>
         <li>
             <a href="https://www.facebook.com/" target="_blank" rel="noopener"
                 aria-label="Visit our Facebook page (opens in a new tab)">
@@ -415,6 +411,5 @@
 <script src="https://kit.fontawesome.com/f0ebc05836.js" crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js" defer></script>
-  
 </body>
 </html>
