@@ -1,4 +1,4 @@
-# **DEE J PRO** 
+# **PROJECT 2: HTML, CSS and JAVASCRIPT: DEE J PRO** 
 Website URL: [DEE J PRO: The Virtual DJ Mixer GitHub Repository](https://allaboutdee.github.io/Project2/v2index.html)
 
 ## **Site Overview**
@@ -14,8 +14,7 @@ Educational Resources: Tutorials, guides, and tips to help you master the art of
 ![Am I responsive screenshot](assets/images/Laptop%20View.jpg)
 ![Am I responsive screenshot](assets/images/iPad%20Pro%20View.jpg)
 
-DEE J PRO is a complex design made to emulate a real life dj. Due to its many functions and features this is not suitable to view on smaller screens. It can be viewed responsively on some ipads and is generally ok to view on laptop and desktop screens. 
-In the near future I will design a more basic virtual DJ that will be suitable for smaller screens.  
+DEE J PRO is a complex design made to emulate a real-life DJ setup. Due to its many functions and features, this is not suitable for smaller screens. It can be viewed responsively on some iPads and is generally optimal for laptop and desktop screens. In the near future, a more basic virtual DJ version will be designed for smaller screens.
 
 ## Table of contents:
 1. [**Site Overview**](#site-overview)
@@ -53,214 +52,343 @@ In the near future I will design a more basic virtual DJ that will be suitable f
 
 ---
 ### **Planning stage:**
-* In the planning stage, key elements were defined to shape the website’s structure, including user experience (UX) principles, aesthetic style, and interactive features. Each section was designed to enhance engagement and usability, focusing on mobile, ipad and laptop views.
+
+* The planning phase involved:
+
+* Researching existing virtual DJ platforms to identify gaps and opportunities.
+
+* Sketching initial ideas for layout and functionality.
+
+* Prioritizing a responsive design suitable for laptops and desktops.
+
+* Mapping out features such as waveform visualization, customizable interfaces, and real-time audio controls.
 
 ### **Target Audiences:**
-* Surfing enthusiasts of all levels
-* Families seeking activities to enjoy together
-* Individuals wanting to meet like-minded adventurers
-* Community-oriented travelers and beach culture fans
-* People eager to explore, learn, and connect within a supportive group
-* Prospective new members who want to learn, participate, or get involved in future events and activities
+
+* Aspiring DJs: Individuals who want to learn and practice DJing without investing in expensive equipment.
+
+* Professional DJs: Experienced performers looking for a portable and convenient solution for mixing on-the-go.
+
+* Music Enthusiasts: Casual users curious about DJing and music creation.
+
+* Educators and Students: Teachers and learners exploring music production and performance tools.
+
+* Event Organizers: Those who require a simple yet powerful tool to manage and play music for events.
+
+*Budget-Conscious Users: Anyone looking for an affordable alternative to costly DJ gear.
 
 ### **User Stories:**
 
-* As a user, I want to navigate easily across the site to find relevant information.
-* As a user, I want to see upcoming events effortlessly.
-* As a user, I want to quickly understand what the website is about.
-* As a user, I want the site to look aesthetically pleasing across devices (mobile, tablet and laptop).
-* As a user, I want my personal information to be secure.
-* As a user, I want the site to be accessible on all my devices (mobile, ipad and laptop device).
-* As a user and prospective member, I want a clear sign-up form to join.
-* As a user and current member, I want up-to-date information on upcoming events and meetups.
+* As an aspiring DJ, I want to learn the basics of DJing through tutorials and guides.
+
+* As a professional DJ, I want advanced features to perform seamlessly.
+
+* As a music enthusiast, I want an easy-to-use interface to experiment with mixing music.
+
+* As an educator, I want a platform to teach students the fundamentals of DJing.
+
+* As an event organizer, I want a reliable platform to curate and mix music during events.
+
+* As a budget-conscious user, I want access to professional-grade tools without the high costs of physical DJ equipment.
+
 
 ### **Site Aims:**
 
-* Informative: Provide users with easy access to activity or club details, schedules, and information about the club.
-* Engaging: Use visual elements and a clear layout to attract and retain visitor attention.
-* Community-focused: Promote connection among users through events, gallery images, and sign-up options.
+* Provide an interactive, professional-grade virtual DJ experience.
+
+* Make DJing accessible to users of varying skill levels.
+
+* Create an educational hub for learning the essentials of DJing.
+
+* Offer a cost-effective alternative to physical DJ equipment.
 
 ### **How Will This Be Achieved:**
 
-Each aim is reflected in the design choices, such as the use of high-quality images, event schedules, a gallery page, and a signup form. The site also has a clean layout, fast loading times, and accessibility considerations, ensuring a smooth experience.
+* Implementing a robust and responsive user interface.
 
-* The **Home page** has a white background with vibrant colors and images reflecting surf and sea. The header and buttons are in blue/green tones, while reds and oranges in the cover text complement the visuals, tying it all together.
-* The **Gallery section** showcases vibrant pictures of members surfing, relaxing, and partying, reinforcing the club’s close-knit, community vibe.
-* The **Sign-up page** features a simple form for inquiries, membership sign-ups, and newsletter subscriptions.
+* Leveraging advanced technologies for real-time audio processing and visualization.
 
+* Designing tutorials and guides for skill development.
 
 ### **Wireframes:**
 
-Initially I drew a very basic draft of what the webpages may look like on mobile view: 
+he wireframe for the project was meticulously designed using an Excel sheet. Given the numerous functions and compartments of the DJ interface, this approach was essential for organizing and labeling sections efficiently. It significantly streamlined the process of structuring and writing the HTML code for the interface. The wireframe illustrates a DJ setup with various functions and features, logically divided into distinct containers for clarity and usability.
+
+Key Elements of the Wireframe
+
+The interface comprises two decks and a mixer section, labeled "Deck A," "Deck B," and "Mixer." These sections provide an array of features that enhance the user's DJing experience, including the ability to upload and manage individual audio tracks. Users can create seamless transitions, mix tracks, and apply manual and auto loops. Additional functionality includes tempo, volume, and speed adjustments, frequency filtering, and blending tracks effortlessly. The spinning jog wheels deliver a lifelike DJing experience.
+
+Key Features
+
+1. Dual Decks (Deck A and Deck B). Each deck includes:
+        * Pitch Control
+        * FX Controls
+        * Touch Strip
+        * Beats and Tap Timing
+        * Tempo Fader
+        * Jog Wheel
+        * Performance Pads with options for:
+                * Manual Loop
+                * Auto Loop
+                * Speed Adjustments (x0.5, x2)
+                * Samplers
+                * Cues (Cue 1-4)
+        * Control Buttons:
+                * Sync
+                * Cue
+                * Play/Pause
+
+2. *Mixer Section* The mixer section offers:
+        * Equalizer Controls (Bass, Mid, Treble)
+        * Master Gain Control
+        * High-Pass and Low-Pass Filters
+        * Headphone and Microphone Integration
+        * Recording Functions (Record, Save Mix, Play Mix)
+        * Channel Volume Adjustments
+        * Crossfader for blending audio between decks
+        * Audio Management (Track Selection and Uploading)
+
+3. *Waveform Display* A dynamic waveform display provides real-time visual feedback of the tracks being played, aiding precision mixing.
+
+4.*Music and Sampler Display* The music and sampler display enhances the user experience by providing a clear overview of the loaded tracks and sampler content.
+
+In summary, the wireframe demonstrates a comprehensive DJ interface that effectively balances advanced functionality with intuitive design. This ensures users can enjoy an immersive and seamless DJing experience, whether they are beginners or professionals.
+
+
 
 Drafts for the mobile view were sketched manually:  
-![Mobile Drafts](assets/images/screenshots/draft_mobile_view.jpeg)
+![Mobile Drafts](assets/images/)
 
 
 Finalized designs were displayed across various screen sizes using the Am I Responsive tool:  
-![Responsive Views](assets/images/screenshots/Am_I_Responsive.jpg)
- ![alt text](assets/images/screenshots/Am_I_Responsive2.jpg) ![alt text](assets/images/screenshots/Am_I_Responsive3.jpg)
- ![Gallery](assets/images/screenshots/Am_I_Responsive_Gallery.jpg)
- ![Signup](assets/images/screenshots/Am_I_Responsive_signup.jpg)
-    
+![Responsive Views](assets/images/)
+ ![alt text](assets/images/) ![alt text](assets/images/)
+ ![Gallery](assets/images/)
+ ![Signup](assets/images/)
+
+**Technical Implementation**
+
+*Frontend*
+
+The frontend of DEE J PRO is built using HTML, CSS, and JavaScript. A grid-based layout is implemented to organize the various components, ensuring a responsive and intuitive user experience across different devices. Custom CSS animations and transitions are used to enhance the interactivity and visual appeal of the interface. The layout is optimized for larger screens, such as desktops and laptops, as the interface includes intricate controls and features that benefit from ample screen space.
+
+*Audio Handling*
+
+DEE J PRO leverages the Web Audio API for advanced audio processing, offering users precise control over audio playback, mixing, and effects. The integration of the WaveSurfer.js library provides dynamic and interactive audio waveform visualizations, allowing users to see real-time track progress and make accurate adjustments. This combination enables seamless audio manipulation, including looping, filtering, tempo adjustments, and track synchronization, ensuring a professional-grade DJing experience.
+
+**Key Features of the Implementation**
+
+*Dynamic Audio Controls:*
+                * Supports uploading individual audio tracks to Deck A and Deck B.
+                * Provides features such as pitch adjustments, tempo control, and looping.
+
+*Responsive Design:*
+                * Utilizes a grid-based layout for logical compartmentalization of the DJ interface, ensuring intuitive navigation.
+                * Optimized for laptops and desktops, with plans for a simplified mobile-friendly version in the future.
+
+*Interactive Visualizations:*
+                *WaveSurfer.js integration enables real-time waveform rendering, helping users identify beat drops and transitions visually.
+
+*Customizability:*
+                * Users can switch between light and dark themes and customize the colors of Deck A, Deck B, and the Mixer section for a personalized experience.
+
+By combining cutting-edge web technologies with user-centered design principles, DEE J PRO delivers a feature-rich, accessible, and immersive DJing platform for users of all skill levels.
+
+**How to Use**
+
+Using DEE J PRO is straightforward and designed for users of all skill levels. Follow the steps below to get started:
+
+    *   1. Upload Your Tracks:
+            * Begin by selecting and uploading audio tracks to "Deck A" and "Deck B" using the "Load Deck" function in the Mixer section. This allows you to prepare two tracks for mixing.
+    *   2. Play and Pause Tracks:
+            * Use the clearly labeled "Play/Pause" buttons on each deck to start or stop playback.
+    *   3. Mix and Transition:
+            * Utilize the crossfader located in the Mixer section to seamlessly transition between Deck A and Deck B. Slide it left or right to control the blend of audio between the two decks.
+    *   4. Adjust Audio Settings:
+            * Fine-tune your mix using the volume sliders, equalizer controls (Bass, Mid, Treble), and master gain settings in the Mixer section.
+    *   5. Add Effects and Loops:
+            * Experiment with the performance pads on each deck to create manual or auto loops, adjust track speed (x0.5 or x2), and activate samplers or cue points (Cue 1-4).
+            * Use the FX controls and touchstrip to apply effects and modulate parameters in real time.
+    *   6. Modify Tempo and Pitch:
+            * Adjust playback tempo using the tempo fader or make pitch adjustments with the pitch nudge controls (+/-) on each deck.
+    *   7. Customize Your Interface:
+            * Switch between light and dark themes or customize the background colors of Deck A, Deck B, and the Mixer section to suit your preferences.
+    *   8. Record and Save Your Mix:
+        * Use the "Record" button in the Mixer section to capture your live mix. Save your recording to the library or a folder for future playback or sharing.
+    *   9. Headphone and Microphone Integration:
+        * Enable the PFL Cue to monitor channels through headphones.
+        * Use the microphone controls to switch on the mic, adjust input volume, or record voiceovers as part of your mix.
+    *   10. Visualize Your Tracks:
+
+Follow the real-time waveform display to monitor track progress, identify beat drops, and refine your transitions.
+
+DEE J PRO offers a hands-on DJing experience that simulates professional equipment while maintaining accessibility and affordability. Explore the various buttons, sliders, and pads to unlock your creative potential and enjoy mixing music directly in your browser. 
 
 ### **Color Scheme:**
 
-I selected a vibrant color scheme inspired by the sea, with blues and greens as primary colors and touches of red, orange, and yellow reflecting a sunset sky. A white background makes these colors stand out, while the header’s `#bdf2f6` color complements the hero image. The cover text container features an orange/coral tone to contrast the hero image and tie into the theme cohesively.
+
+The design of DEE J PRO aims to strike a balance between visual appeal and practicality, emulating the aesthetic of professional DJ equipment while ensuring user comfort and clarity. The primary color palette is inspired by metallic tones, combining a sleek metallic white base with vibrant metallic red accents for buttons and sliders. This combination enhances the interface’s modern and professional look, while also drawing attention to key controls and features.
+
+For users who prefer a darker theme, the platform includes a dark grey metallic option. This alternative base color minimizes eye strain and provides a softer contrast compared to traditional black-themed DJ interfaces, which can often feel overwhelming and fatiguing. Additionally, users can customize the background color to match the dark grey metallic theme, further personalizing their experience.
+
+Unlike many virtual DJ platforms that heavily rely on a predominantly black interface, DEE J PRO offers the flexibility of a light or dark mode. The metallic red accents remain consistent across themes, ensuring that critical functions and features are easily distinguishable in both modes. This thoughtful approach not only enhances usability but also aligns with the vibrant and dynamic atmosphere of DJing environments, offering users a visually pleasing and intuitive interface that elevates their mixing experience.
+
+
+
+![Colour Combination 1](assets/images/Desktop%20View-dark%20bg.jpg)
+![colour Conbination 2](assets/images/Desktop%20View-dark%20interface.jpg)
+
 
 ## **Technology Used:**
 ### Languages Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+highligted 2 warning regarding aria labels. I have diregarded this because the touchstrip does require user interaction.
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+- The use of slider vertical is not correct however removing it keeps causing the channel faders to loose their styling
+
+ - The scrath keyframes are not an issue right now as the scratch function has not yet been implement. 
+
+ -  [JavaScript]
 
 ### Frameworks, Libraries & Programs Used
 
 1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on the forms on the activity page, alongside the social media icons within the footer.
+    - Font Awesome was social media icons within the footer. 
 1. [Git:](https://git-scm.com/)
     - Git was used for version control by utilizing the command line terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub was used to store the project code after being pushed from Git.
 1.  [VisualStudioCode:](https://code.visualstudio.com/)
     1.  Visual Studio Code was used to write the project code and then pushed through to the Git Repository.
-1. [Favicon.io:](https://favicon.io/)
-    - Favicon.io was used to create a favicon to display in the browser. Image of a man holding a surfboard was downloaded from pixabay. This was then uploaded to favicon.io to convert the image and create the favicon item. 
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the navigation links
-1. [Pixabay:](https://pixabay.com/)
-    - Pixabay was used source royalty-free images for the website.
-1. [Pexels:](https://www.pexels.com/)
-    - Pexels was used to source royalty-free images for the website.
+1. [Open Game Art:](https://opengameart.org/)
+    1.  Open Game Art was used to source royalty free music to sample. 
+
 
 ---
 
 ## **Current Features Common to all pages**
 ## **Browser** 
 
-The browser for any page displays the favicon I generated using the favicon.io tool.
-[Favicon large](assets/images/favicon.jpg)
-[Favicon](assets/Favicon/favicon-32x32.png)
 
 ### **Main body**
-The site has a consistent layout across all pages, with shared header and footer elements for easy navigation and a unified look.
+The site has a consistent layout and colour them going with the metallic white, silver, red, grey.
 
 ### *Header Element:*
-The header is used throughout the site to hold the navigation bar and the site title.
+The header is used throughout the site to hold the navigation bar and the site title. For the main dj page the header containts the switch theme buttons for the dj interface and body background. The has been placed in the header intentionally as the DJ has many functionalities of its own already, 
 
 - **Title**: A clear, stylized title for easy recognition.
-- **Logo**: Styled in the 'Great Vibes' font and positioned centrally, with dark coloring against the header’s blue/green background.
-- **Navigation Bar**: A responsive, mobile-first menu that adjusts for various screen sizes.
+- **Logo**: The logo is basic font for a bold look
+- **Navigation Bar**: display link to the other pages in a clear button-style format, when hovered over they change colour.
 - **Design**: The basic layout of the header, footer and logo is the same across the pages.
 
-[Header](assets/images/header.png)
+[Header](assets/images/)
 
 ### *Footer:*
-The footer contains links to social media platforms (Facebook, X-app, YouTube, Instagram), with white icons on a dark grey background for a sleek, contrasting finish.
+The footer contains links to social media platforms (Facebook, X-app, YouTube, Instagram), with white icons on a dark grey background for a sleek, contrasting finish. These are juts place holders for now. 
 
-[Footer:] (assets/images/footer.png)
+[Footer:] (assets/images/)
+
+## **Functionalities**
+
+Below is a table with list of all the functionalities of the vitual DJ. Those highlighted green have been implements and those in red have been removed as not required or have been replaced. 
+
+The learner hub will be implemented once DEE J PRO is fully functioning. 
+
+[DEE J PRO functions and features](assets/images/DEE%20J%20PRO-%20FUNCTIONS.jpg)
+
 
 ## **Future-Enhancements**
+As per the table below, it was not possible to successfully implement all functions and features due to the time constraints of the project. Therefore, a priority for future enhancements is to fully implement all planned features and ensure they work seamlessly.
 
-- **Expanded Event Calendar**: Introduce more events for easier future planning. Introduce interactive elements such as clickable links with more information and ability to book events.
-- **Blog/News Section**: Include a blog for surfing-related articles and club updates. 
-- **E-commerce Feature**: Introduce an online store for club-branded merchandise, including surfboards, apparel, and accessories.
-- **More Information**: Add details on membership fees, surf classes, instructor bios, and community resources. Add another page dedicated to information on surfing, tutorials, recommended surfing destinations and guidance on recommended surfing kits.
-- **FAQ or Troubleshooting**: Include a FAQ or Troubleshooting section for common user queries.
+*Planned Features to Complete the Virtual DJ:*
+        * Enhanced Visual Waveform Display: Incorporate a more advanced waveform visualizer to help users with precise track alignment and beat matching.
+        * Advanced Deck Functionality: Complete all mixer and deck functionalities, including advanced FX controls, customizable filters, and smoother scratch emulation.
 
----
+*Additional Future Enhancements:*
+
+        *   1. Teaching Hub:
+                * Develop an integrated learning center with tutorials, interactive guides, and beginner-to-advanced DJ lessons.
+                * Include step-by-step walkthroughs for using the platform's features and mastering DJ techniques.
+                * Add downloadable resources and exercises to help aspiring DJs practice and learn effectively.
+
+        *   2. Mobile-Friendly Version:*
+                * Redesign the interface to create a simplified version of the DJ for smaller screens, ensuring usability without sacrificing core functionality.
+
+        *   3. Customizable Sound Effects:
+                *   Allow users to upload and apply their own sound effects, loops, or samples for a more personalized DJing experience.
+
+        *   4. Playlist Management:
+                * Enable users to create, save, and load playlists for uninterrupted DJ sets.
+                * Add features for managing track order, cue points, and loops within playlists.
+
+        *   5. AI-Powered Track Recommendations:
+                * Introduce an AI system to analyze user preferences and suggest tracks for seamless transitions and dynamic sets.
+
+        *   6. Collaborative Mixing Feature:
+                * Implement a multi-device syncing system to allow real-time collaboration between users on the same set.
+
+Add chat and communication tools for coordinated mixing sessions.
+
+        *    7. Visualizer Integration:
+                * Include a real-time audio visualizer that reacts dynamically to the music being played, enhancing the aesthetic appeal.
+
+        *    8. Keyboard Shortcuts:
+                * Incorporate customizable keyboard shortcuts for commonly used actions like play, pause, loop, and crossfading.
+
+By addressing these enhancements, DEE J PRO aims to evolve into a comprehensive, user-friendly, and professional-grade virtual DJ platform that caters to DJs of all skill levels.
+
+
+
 
 ## **Testing Phase**
 
 ### **Testing**
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+Rigorous testing was conducted to ensure:
 
--   [**W3C Markup Validator**](https://validator.w3.org/nu/) 
-    
-    **Homepage:**
+* Cross-browser compatibility.
 
-    Initial test for the homepage shows that there were no errors to be corrected.
-    ![Initial test results](assets/images/screenshots/homepage_initial_test_results.png)
+* Responsive design on various devices.
 
+* Smooth audio processing and mixing functionality.
 
-    **Gallery Page:**
+* Testing User Stories from User Experience (UX) Section:
 
-    Initial tests show various errors to be corrected.
-    ![alt text](assets/images/screenshots/gallery_page_initial_test_results.png)
-    ![alt text](assets/images/screenshots/gallery_page_initial_test_results2.png)
+* Each user story was tested to validate the platform’s ability to meet user needs.
 
-    After fixing the errors, the final test results confirm no errors or warnings.
-    
-    ![Final test results](assets/images/screenshots/final_gallery_page_test_results.png )
+Further Testing:
 
-    **Signup Page:**
+User feedback was gathered for iterative improvements.
 
-    Initial tests show various errors to be corrected.
-    ![Initial test results](assets/images/screenshots/signup_initial_test_results.png)
-    
-    After fixing the errors, the final test results confirm no errors or warnings.
-    ![Final test results](assets/images/screenshots/signup_final_test_results.png)
+* Additional bug fixes and refinements were made.
 
--   [**W3C CSS Validator**](https://jigsaw.w3.org/css-validator) 
+The W3C Markup Validator and W3C CSS Validator Services were used to validate the Virtual DJ page, there 2 error highlighted.
 
-    **CSS**:
+-   [**W3C Markup Validator**](assets/images/html%20validator%20initial%20check.jpg) 
 
-    Initial tests shows there are no errors be corrected.
-    ![Initial test results](assets/images/screenshots/CSS_initial_test_results.png)
-    
-### Testing User Stories from User Experience (UX) Section
+-   [**W3C CSS Calidator**](assets/images/css%20validator%20check.jpg)
 
-1. As a user, I want to navigate easily across the site to find relevant information.
-
-    1. The navigation bar is simple and intuitive. On mobile devices, it transforms into a burger menu with a dropdown for easy access.
-2. As a user, I want to see upcoming events effortlessly.
-
-    1. Upcoming events are prominently displayed on the homepage, featuring details like location and date.
-3. As a user, I want to quickly understand what the website is about.
-
-    1. The website layout is clear and logical. Information is divided into relevant sections, presented concisely, and avoids overcrowding.
-4. As a user, I want the site to look aesthetically pleasing across devices.
-
-    1. The website is visually appealing, with a vibrant color palette and stunning images. Sections are well-organized to enhance user experience.
-5. As a user, I want my personal information to be secure.
-
-    1. Users can safely complete the sign-up form to provide basic details such as name, email, and comments or questions.
-    1. Currently, only essential details are collected. Future iterations may include membership options, merchandise purchases, and enhanced security features.
-    1. Advanced functionalities like chat, user sign-in, and profile pages are planned for future development.
-6. As a user, I want the site to be accessible and visually appealing on my mobile, tablet, and laptop devices.
-
-    1. The website design is responsive, adapting to screens of various sizes.
-    1. Known issues:
-        - Logo and menu overlap on Samsung Galaxy S8+ and Galaxy Z Fold 5.
-        - Header and cover text overlap on iPad Mini.
-        - These issues remain unresolved due to time constraints but are noted for future improvements.
-7. As a user and prospective member, I want a clear sign-up form to join.
-
-    1. The sign-up form is straightforward and user-friendly. It allows users to:
-        - Subscribe to the newsletter.
-        - Leave comments or ask questions.
-        - Indicate their surfing expertise level.
+-   [**Minify - JavaScript and CSS minifier**](https://www.minifier.org/javascript-validator)
 
 ### Further Testing
 
--  **Website Testing**: The Website was tested on Google Chrome, Internet Explorer and Microsoft Edge.
--   The website was viewed on a variety of devices such as Desktop, Laptop and android phones.
+-  **Virtual DJ  Testing**: The Website was tested on Google Chrome, Internet Explorer and Microsoft Edge.
+-   The website was viewed on a variety of devices such as Desktop and Laptop.
 - **Link Testing**: All internal/external links were tested manually to confirm they redirect to the correct pages without delays.  
 - **User experience**: Friends and family members were asked to review the site and documentation to identify whether there were any bugs and/or user experience issues.
 
 ### Accessibility
 
-- **Screen Reader Optimization**: All images include `alt` tags for screen readers.
-- **Image Formats**: Optimized with webp and jpg for fast loading.
 - **Responsive Design**: Adapts to different screen sizes.
 - **Keyboard Navigation**: The site is navigable without a mouse.
 - **Semantic Elements**: Used throughout for readability and accessibility
 
 ## Known Bugs
 
-* Logo and burger menu overlap on Galaxy S8+ and Galaxy Z Fold 5. 
-* The header partially hides cover image on iPad Mini view.
+* The Virtual DJ is not completely responsive for all ipads. This will be worked on. 
 
 **Planned Fixes**:  
 These layout issues will be prioritized for resolution in future iterations.
@@ -270,7 +398,7 @@ These layout issues will be prioritized for resolution in future iterations.
 ## **Deployment**
 I deployed the page on GitHub pages via the following procedure: -
 
-1. From the project's [repository](https://github.com/AllaboutDee/P1), go to the **Settings** tab.
+1. From the project's [repository](https://github.com/AllaboutDee/Project2), go to the **Settings** tab.
 2. From the left-hand menu, select the **Pages** tab.
 3. Under the **Source** section, select the **Main** branch from the drop-down menu and click **Save**.
 4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link.
@@ -281,17 +409,12 @@ I deployed the page on GitHub pages via the following procedure: -
 
 ### **Honourable mentions**
 
- I would like to thank a few of my fellow bootcampers for their support in resolving issues that I stumbled upon, listed in no particular order:
-
-- [Jasmine Price](https://github.com/jevpr): Provided guidance on code issues.
-- [Asraf](https://github.com/PATH-HIVE): Offered support with GitHub and project encouragement.
 
 
 ### **General Reference:**
 
 - Resources: Code Institute, YouTube, W3Schools, freeCodeCamp, MDN Web Docs and Stack Overflow.
 
-- Original site structure: Based on Code Institute's "Love Running" project, with additional features and styling tailored for the surfing community.
 - Readme.md layout inspiration: Tribe project by Adelle King (https://github.com/AdelleKing/Tribe/blob/main/README.md). I particularly like the thoroughness of the content.
 - Deployment Reference: GitHub Pages documentation and various GitHub tutorials for seamless live site hosting.
 
@@ -300,6 +423,5 @@ I deployed the page on GitHub pages via the following procedure: -
 * Icons used across the website were taken from [Font Awesome](https://fontawesome.com) 
 
 ### **Media:**
-* Images used for activities were taken from [Pexels](https://www.pexels.com/) and [Pixabay](https://www.pixabay.com)
 
 ---
