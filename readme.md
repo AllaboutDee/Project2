@@ -6,9 +6,9 @@ Welcome to **DEE J PRO** – DEE J PRO was created with a vision to bring the po
 
 What We Offer:
 Interactive Virtual DJ Platform: Mix, loop, and scratch like a pro using our state-of-the-art tools.
-Dynamic Waveform Display: Visualize your tracks in real-time for precise control and seamless transitions (Work in progress).
+Dynamic Waveform Display: Visualize your tracks in real-time for precise control and seamless transitions (work in progress).
 Customizable Features: Tailor your setup to suit your unique style and preferences.
-Educational Resources: Tutorials, guides, and tips to help you master the art of DJing (Work in progress).
+Educational Resources: Tutorials, guides, and tips to help you master the art of DJing (work in progress).
 
 ![Am I responsive screenshot](assets/images/Desktop%20View.jpg)
 ![Am I responsive screenshot](assets/images/Laptop%20View.jpg)
@@ -75,7 +75,7 @@ DEE J PRO is a complex design made to emulate a real-life DJ setup. Due to its m
 
 * Event Organizers: Those who require a simple yet powerful tool to manage and play music for events.
 
-*Budget-Conscious Users: Anyone looking for an affordable alternative to costly DJ gear.
+* Budget-Conscious Users: Anyone looking for an affordable alternative to costly DJ gear.
 
 ### **User Stories:**
 
@@ -112,8 +112,10 @@ DEE J PRO is a complex design made to emulate a real-life DJ setup. Due to its m
 
 ### **Wireframes:**
 
-he wireframe for the project was meticulously designed using an Excel sheet. Given the numerous functions and compartments of the DJ interface, this approach was essential for organizing and labeling sections efficiently. It significantly streamlined the process of structuring and writing the HTML code for the interface. The wireframe illustrates a DJ setup with various functions and features, logically divided into distinct containers for clarity and usability.
+The wireframe for the project was meticulously designed using an Excel sheet. Given the numerous functions and compartments of the DJ interface, this approach was essential for organizing and labeling sections efficiently. It significantly streamlined the process of structuring and writing the HTML code for the interface. The wireframe illustrates a DJ setup with various functions and features, logically divided into distinct containers for clarity and usability.
 
+![Initial wireframe]()
+![Final wirefrrame]()
 Key Elements of the Wireframe
 
 The interface comprises two decks and a mixer section, labeled "Deck A," "Deck B," and "Mixer." These sections provide an array of features that enhance the user's DJing experience, including the ability to upload and manage individual audio tracks. Users can create seamless transitions, mix tracks, and apply manual and auto loops. Additional functionality includes tempo, volume, and speed adjustments, frequency filtering, and blending tracks effortlessly. The spinning jog wheels deliver a lifelike DJing experience.
@@ -224,15 +226,23 @@ Follow the real-time waveform display to monitor track progress, identify beat d
 
 DEE J PRO offers a hands-on DJing experience that simulates professional equipment while maintaining accessibility and affordability. Explore the various buttons, sliders, and pads to unlock your creative potential and enjoy mixing music directly in your browser. 
 
+## **Design**
 ### **Color Scheme:**
-
-
 The design of DEE J PRO aims to strike a balance between visual appeal and practicality, emulating the aesthetic of professional DJ equipment while ensuring user comfort and clarity. The primary color palette is inspired by metallic tones, combining a sleek metallic white base with vibrant metallic red accents for buttons and sliders. This combination enhances the interface’s modern and professional look, while also drawing attention to key controls and features.
 
 For users who prefer a darker theme, the platform includes a dark grey metallic option. This alternative base color minimizes eye strain and provides a softer contrast compared to traditional black-themed DJ interfaces, which can often feel overwhelming and fatiguing. Additionally, users can customize the background color to match the dark grey metallic theme, further personalizing their experience.
 
 Unlike many virtual DJ platforms that heavily rely on a predominantly black interface, DEE J PRO offers the flexibility of a light or dark mode. The metallic red accents remain consistent across themes, ensuring that critical functions and features are easily distinguishable in both modes. This thoughtful approach not only enhances usability but also aligns with the vibrant and dynamic atmosphere of DJing environments, offering users a visually pleasing and intuitive interface that elevates their mixing experience.
 
+Controls and Interface Design:
+
+The interface design of DEE J PRO prioritizes functionality and user experience, with deliberate choices made to accommodate the online platform’s constraints and user needs.
+
+Sliders and Press Buttons: Instead of traditional turn knobs often found on physical DJ equipment, DEE J PRO employs sliders for controls such as equalizer adjustments and frequency tuning. This design choice ensures precise control in an online interface, where turn knobs may be less practical.
+
+Jog Wheel: The jog wheel is designed with a silver metallic effect and shadowing to mimic a realistic, physical appearance. A central strip highlights the spinning motion, enhancing the immersive experience and creating a lifelike feel for users.
+
+These design elements collectively offer a balance of realism and practicality, ensuring the platform feels professional while remaining intuitive and accessible for all users.
 
 
 ![Colour Combination 1](assets/images/Desktop%20View-dark%20bg.jpg)
