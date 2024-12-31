@@ -114,8 +114,9 @@ DEE J PRO is a complex design made to emulate a real-life DJ setup. Due to its m
 
 The wireframe for the project was meticulously designed using an Excel sheet. Given the numerous functions and compartments of the DJ interface, this approach was essential for organizing and labeling sections efficiently. It significantly streamlined the process of structuring and writing the HTML code for the interface. The wireframe illustrates a DJ setup with various functions and features, logically divided into distinct containers for clarity and usability.
 
-![Initial wireframe]()
-![Final wirefrrame]()
+![Initial wireframe](assets/images/Initial%20DJ%20Design.jpg)
+![Final wirefrrame](assets/images/Final%20DJ%20Design.jpg)
+
 Key Elements of the Wireframe
 
 The interface comprises two decks and a mixer section, labeled "Deck A," "Deck B," and "Mixer." These sections provide an array of features that enhance the user's DJing experience, including the ability to upload and manage individual audio tracks. Users can create seamless transitions, mix tracks, and apply manual and auto loops. Additional functionality includes tempo, volume, and speed adjustments, frequency filtering, and blending tracks effortlessly. The spinning jog wheels deliver a lifelike DJing experience.
@@ -157,17 +158,6 @@ Key Features
 In summary, the wireframe demonstrates a comprehensive DJ interface that effectively balances advanced functionality with intuitive design. This ensures users can enjoy an immersive and seamless DJing experience, whether they are beginners or professionals.
 
 
-
-Drafts for the mobile view were sketched manually:  
-![Mobile Drafts](assets/images/)
-
-
-Finalized designs were displayed across various screen sizes using the Am I Responsive tool:  
-![Responsive Views](assets/images/)
- ![alt text](assets/images/) ![alt text](assets/images/)
- ![Gallery](assets/images/)
- ![Signup](assets/images/)
-
 **Technical Implementation**
 
 *Frontend*
@@ -200,29 +190,37 @@ By combining cutting-edge web technologies with user-centered design principles,
 
 Using DEE J PRO is straightforward and designed for users of all skill levels. Follow the steps below to get started:
 
-    *   1. Upload Your Tracks:
-            * Begin by selecting and uploading audio tracks to "Deck A" and "Deck B" using the "Load Deck" function in the Mixer section. This allows you to prepare two tracks for mixing.
-    *   2. Play and Pause Tracks:
-            * Use the clearly labeled "Play/Pause" buttons on each deck to start or stop playback.
-    *   3. Mix and Transition:
-            * Utilize the crossfader located in the Mixer section to seamlessly transition between Deck A and Deck B. Slide it left or right to control the blend of audio between the two decks.
-    *   4. Adjust Audio Settings:
-            * Fine-tune your mix using the volume sliders, equalizer controls (Bass, Mid, Treble), and master gain settings in the Mixer section.
-    *   5. Add Effects and Loops:
-            * Experiment with the performance pads on each deck to create manual or auto loops, adjust track speed (x0.5 or x2), and activate samplers or cue points (Cue 1-4).
-            * Use the FX controls and touchstrip to apply effects and modulate parameters in real time.
-    *   6. Modify Tempo and Pitch:
-            * Adjust playback tempo using the tempo fader or make pitch adjustments with the pitch nudge controls (+/-) on each deck.
-    *   7. Customize Your Interface:
-            * Switch between light and dark themes or customize the background colors of Deck A, Deck B, and the Mixer section to suit your preferences.
-    *   8. Record and Save Your Mix:
-        * Use the "Record" button in the Mixer section to capture your live mix. Save your recording to the library or a folder for future playback or sharing.
-    *   9. Headphone and Microphone Integration:
-        * Enable the PFL Cue to monitor channels through headphones.
-        * Use the microphone controls to switch on the mic, adjust input volume, or record voiceovers as part of your mix.
-    *   10. Visualize Your Tracks:
+1. Upload Your Tracks:
+    -  Begin by selecting and uploading audio tracks to "Deck A" and "Deck B" using the "Load Deck" function in the Mixer section. This allows you to prepare two tracks for mixing.
 
-Follow the real-time waveform display to monitor track progress, identify beat drops, and refine your transitions.
+2. Play and Pause Tracks:
+    - Use the clearly labeled "Play/Pause" buttons on each deck to start or stop playback.
+
+3. Mix and Transition:
+    - Utilize the crossfader located in the Mixer section to seamlessly transition between Deck A and Deck B. Slide it left or right to control the blend of audio between the two decks.
+
+4. Adjust Audio Settings:
+    - Fine-tune your mix using the volume sliders, equalizer controls (Bass, Mid, Treble), and master gain settings in the Mixer section.
+
+5. Add Effects and Loops:
+    - Experiment with the performance pads on each deck to create manual or auto loops, adjust track speed (x0.5 or x2), and activate samplers or cue points (Cue 1-4).
+    - Use the FX controls and touchstrip to apply effects and modulate parameters in real time.
+
+6. Modify Tempo and Pitch:
+    - Adjust playback tempo using the tempo fader or make pitch adjustments with the pitch nudge controls (+/-) on each deck.
+
+7. Customize Your Interface:
+    - Switch between light and dark themes or customize the background colors of Deck A, Deck B, and the Mixer section to suit your preferences.
+
+8. Record and Save Your Mix:
+    - Use the "Record" button in the Mixer section to capture your live mix. Save your recording to the library or a folder for future playback or sharing.
+
+9. Headphone and Microphone Integration:
+    - Enable the PFL Cue to monitor channels through headphones.
+    - Use the microphone controls to switch on the mic, adjust input volume, or record voiceovers as part of your mix.
+
+10. Visualize Your Tracks:
+    - Follow the real-time waveform display to monitor track progress, identify beat drops, and refine your transitions.
 
 DEE J PRO offers a hands-on DJing experience that simulates professional equipment while maintaining accessibility and affordability. Explore the various buttons, sliders, and pads to unlock your creative potential and enjoy mixing music directly in your browser. 
 
@@ -257,11 +255,14 @@ These design elements collectively offer a balance of realism and practicality, 
 highligted 2 warning regarding aria labels. I have diregarded this because the touchstrip does require user interaction.
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-- The use of slider vertical is not correct however removing it keeps causing the channel faders to loose their styling
+The use of slider vertical is not correct however removing it keeps causing the channel faders to loose their styling
 
- - The scrath keyframes are not an issue right now as the scratch function has not yet been implement. 
+The scrath keyframes are not an issue right now as the scratch function has not yet been implement. 
 
  -  [JavaScript]
+
+ No real issues reported.
+
 
 ### Frameworks, Libraries & Programs Used
 
@@ -303,7 +304,7 @@ The footer contains links to social media platforms (Facebook, X-app, YouTube, I
 
 ## **Functionalities**
 
-Below is a table with list of all the functionalities of the vitual DJ. Those highlighted green have been implements and those in red have been removed as not required or have been replaced. 
+Below is a table with list of all the functionalities of the vitual DJ. Those highlighted green have been implemented and those in red have been removed as not required or have been replaced. The others are slowing being implemented as part of a wider project.
 
 The learner hub will be implemented once DEE J PRO is fully functioning. 
 
@@ -311,7 +312,7 @@ The learner hub will be implemented once DEE J PRO is fully functioning.
 
 
 ## **Future-Enhancements**
-As per the table below, it was not possible to successfully implement all functions and features due to the time constraints of the project. Therefore, a priority for future enhancements is to fully implement all planned features and ensure they work seamlessly.
+As per the table below, it was not possible to successfully implement all functions and features due to the time constraints of the project. Therefore, a priority for future enhancements is to fully implement all planned features and ensure they work seamlessly. This will be done as an advanced and continuous project.
 
 *Planned Features to Complete the Virtual DJ:*
         * Enhanced Visual Waveform Display: Incorporate a more advanced waveform visualizer to help users with precise track alignment and beat matching.
@@ -319,34 +320,33 @@ As per the table below, it was not possible to successfully implement all functi
 
 *Additional Future Enhancements:*
 
-        *   1. Teaching Hub:
-                * Develop an integrated learning center with tutorials, interactive guides, and beginner-to-advanced DJ lessons.
-                * Include step-by-step walkthroughs for using the platform's features and mastering DJ techniques.
-                * Add downloadable resources and exercises to help aspiring DJs practice and learn effectively.
+1. Teaching Hub:
+    * Develop an integrated learning center with tutorials, interactive guides, and beginner-to-advanced DJ lessons.
+    * Include step-by-step walkthroughs for using the platform's features and mastering DJ techniques.
+    * Add downloadable resources and exercises to help aspiring DJs practice and learn effectively.
 
-        *   2. Mobile-Friendly Version:*
-                * Redesign the interface to create a simplified version of the DJ for smaller screens, ensuring usability without sacrificing core functionality.
+2. Mobile-Friendly Version:*
+    * Redesign the interface to create a simplified version of the DJ for smaller screens, ensuring usability without sacrificing core functionality.
 
-        *   3. Customizable Sound Effects:
-                *   Allow users to upload and apply their own sound effects, loops, or samples for a more personalized DJing experience.
+3. Customizable Sound Effects:
+    *   Allow users to upload and apply their own sound effects, loops, or samples for a more personalized DJing experience.
 
-        *   4. Playlist Management:
-                * Enable users to create, save, and load playlists for uninterrupted DJ sets.
-                * Add features for managing track order, cue points, and loops within playlists.
+4. Playlist Management:
+    * Enable users to create, save, and load playlists for uninterrupted DJ sets.
+    * Add features for managing track order, cue points, and loops within playlists.
 
-        *   5. AI-Powered Track Recommendations:
-                * Introduce an AI system to analyze user preferences and suggest tracks for seamless transitions and dynamic sets.
+5. AI-Powered Track Recommendations:
+    * Introduce an AI system to analyze user preferences and suggest tracks for seamless transitions and dynamic sets.
 
-        *   6. Collaborative Mixing Feature:
-                * Implement a multi-device syncing system to allow real-time collaboration between users on the same set.
+6. Collaborative Mixing Feature:
+    * Implement a multi-device syncing system to allow real-time collaboration between users on the same set.
+    * Add chat and communication tools for coordinated mixing sessions.
 
-Add chat and communication tools for coordinated mixing sessions.
+7. Visualizer Integration:
+    * Include a real-time audio visualizer that reacts dynamically to the music being played, enhancing the aesthetic appeal.
 
-        *    7. Visualizer Integration:
-                * Include a real-time audio visualizer that reacts dynamically to the music being played, enhancing the aesthetic appeal.
-
-        *    8. Keyboard Shortcuts:
-                * Incorporate customizable keyboard shortcuts for commonly used actions like play, pause, loop, and crossfading.
+8. Keyboard Shortcuts:
+    * Incorporate customizable keyboard shortcuts for commonly used actions like play, pause, loop, and crossfading.
 
 By addressing these enhancements, DEE J PRO aims to evolve into a comprehensive, user-friendly, and professional-grade virtual DJ platform that caters to DJs of all skill levels.
 
