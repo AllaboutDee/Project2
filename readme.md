@@ -320,37 +320,35 @@ As per the table below, it was not possible to successfully implement all functi
 
 **Additional Future Enhancements**:
 
-1. Teaching Hub:
+1. **Teaching Hub**:
     * Develop an integrated learning center with tutorials, interactive guides, and beginner-to-advanced DJ lessons.
     * Include step-by-step walkthroughs for using the platform's features and mastering DJ techniques.
     * Add downloadable resources and exercises to help aspiring DJs practice and learn effectively.
 
-2. Mobile-Friendly Version:*
+2. **Mobile-Friendly Version**:
     * Redesign the interface to create a simplified version of the DJ for smaller screens, ensuring usability without sacrificing core functionality.
 
-3. Customizable Sound Effects:
+3. **Customizable Sound Effects**:
     *   Allow users to upload and apply their own sound effects, loops, or samples for a more personalized DJing experience.
 
-4. Playlist Management:
+4. **Playlist Management**:
     * Enable users to create, save, and load playlists for uninterrupted DJ sets.
     * Add features for managing track order, cue points, and loops within playlists.
 
-5. AI-Powered Track Recommendations:
+5. **AI-Powered Track Recommendations**:
     * Introduce an AI system to analyze user preferences and suggest tracks for seamless transitions and dynamic sets.
 
-6. Collaborative Mixing Feature:
+6. **Collaborative Mixing Feature**:
     * Implement a multi-device syncing system to allow real-time collaboration between users on the same set.
     * Add chat and communication tools for coordinated mixing sessions.
 
-7. Visualizer Integration:
+7. **Visualizer Integration**:
     * Include a real-time audio visualizer that reacts dynamically to the music being played, enhancing the aesthetic appeal.
 
-8. Keyboard Shortcuts:
+8. **Keyboard Shortcuts**:
     * Incorporate customizable keyboard shortcuts for commonly used actions like play, pause, loop, and crossfading.
 
 By addressing these enhancements, DEE J PRO aims to evolve into a comprehensive, user-friendly, and professional-grade virtual DJ platform that caters to DJs of all skill levels.
-
-
 
 
 ## **Testing Phase**
