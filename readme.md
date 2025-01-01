@@ -124,32 +124,32 @@ The interface comprises two decks and a mixer section, labeled "Deck A," "Deck B
 **Key Features**
 
 1. **Dual Decks** (Deck A and Deck B). Each deck includes:
-        -  Pitch Control
-        - FX Controls
-        - Touch Strip
-        - Beats and Tap Timing
-        - Tempo Fader
-        - Jog Wheel
-        - Performance Pads with options for:
-                - Manual Loop
-                - Auto Loop
-                - Speed Adjustments (x0.5, x2)
-                - Samplers
-                - Cues (Cue 1-4)
-        - Control Buttons:
-                -  Sync
-                - Cue
-                - Play/Pause
+        * Pitch Control
+        * FX Controls
+        * Touch Strip
+        * Beats and Tap Timing
+        * Tempo Fader
+        * Jog Wheel
+        * Performance Pads with options for:
+                * Manual Loop
+                * Auto Loop
+                * Speed Adjustments (x0.5, x2)
+                * Samplers
+                * Cues (Cue 1-4)
+        * Control Buttons:
+                * Sync
+                * Cue
+                * Play/Pause
 
 2. **Mixer Section** The mixer section offers:
-        - Equalizer Controls (Bass, Mid, Treble)
-        - Master Gain Control
-        - High-Pass and Low-Pass Filters
-        - Headphone and Microphone Integration
-        - Recording Functions (Record, Save Mix, Play Mix)
-        - Channel Volume Adjustments
-        - Crossfader for blending audio between decks
-        - Audio Management (Track Selection and Uploading)
+        * Equalizer Controls (Bass, Mid, Treble)
+        * Master Gain Control
+        * High-Pass and Low-Pass Filters
+        * Headphone and Microphone Integration
+        * Recording Functions (Record, Save Mix, Play Mix)
+        * Channel Volume Adjustments
+        * Crossfader for blending audio between decks
+        * Audio Management (Track Selection and Uploading)
 
 3. **Waveform Display** A dynamic waveform display provides real-time visual feedback of the tracks being played, aiding precision mixing.
 
@@ -212,7 +212,7 @@ Using DEE J PRO is straightforward and designed for users of all skill levels. F
 7. **Customize Your Interface**:
     - Switch between light and dark themes or customize the background colors of Deck A, Deck B, and the Mixer section to suit your preferences.
 
-8.**Record and Save Your Mix**:
+8. **Record and Save Your Mix**:
     - Use the "Record" button in the Mixer section to capture your live mix. Save your recording to the library or a folder for future playback or sharing.
 
 9. **Headphone and Microphone Integration**:
