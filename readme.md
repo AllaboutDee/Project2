@@ -4,7 +4,7 @@ Website URL: [DEE J PRO: The Virtual DJ Mixer GitHub Repository](https://allabou
 ## **Site Overview**
 Welcome to **DEE J PRO** – DEE J PRO was created with a vision to bring the power of professional DJ equipment to everyone, right from their devices. Combining cutting-edge technology with user-friendly design, our platform is crafted to make music creation and performance more accessible and enjoyable than ever before. 
 
-What We Offer:
+**What We Offer:**
 Interactive Virtual DJ Platform: Mix, loop, and scratch like a pro using our state-of-the-art tools.
 Dynamic Waveform Display: Visualize your tracks in real-time for precise control and seamless transitions (work in progress).
 Customizable Features: Tailor your setup to suit your unique style and preferences.
@@ -51,7 +51,7 @@ DEE J PRO is a complex design made to emulate a real-life DJ setup. Due to its m
     * [**Media**](#media)
 
 ---
-### **Planning stage:**
+## **Planning stage:**
 
 * The planning phase involved:
 
@@ -63,21 +63,21 @@ DEE J PRO is a complex design made to emulate a real-life DJ setup. Due to its m
 
 * Mapping out features such as waveform visualization, customizable interfaces, and real-time audio controls.
 
-### **Target Audiences:**
+## **Target Audiences:**
 
-* Aspiring DJs: Individuals who want to learn and practice DJing without investing in expensive equipment.
+- **Aspiring DJs**: Individuals who want to learn and practice DJing without investing in expensive equipment.
 
-* Professional DJs: Experienced performers looking for a portable and convenient solution for mixing on-the-go.
+- **Professional DJs**: Experienced performers looking for a portable and convenient solution for mixing on-the-go.
 
-* Music Enthusiasts: Casual users curious about DJing and music creation.
+- **Music Enthusiasts**: Casual users curious about DJing and music creation.
 
-* Educators and Students: Teachers and learners exploring music production and performance tools.
+- **Educators and Students**: Teachers and learners exploring music production and performance tools.
 
-* Event Organizers: Those who require a simple yet powerful tool to manage and play music for events.
+- **Event Organizers**: Those who require a simple yet powerful tool to manage and play music for events.
 
-* Budget-Conscious Users: Anyone looking for an affordable alternative to costly DJ gear.
+- **Budget-Conscious Users**: Anyone looking for an affordable alternative to costly DJ gear.
 
-### **User Stories:**
+## **User Stories:**
 
 * As an aspiring DJ, I want to learn the basics of DJing through tutorials and guides.
 
@@ -92,7 +92,7 @@ DEE J PRO is a complex design made to emulate a real-life DJ setup. Due to its m
 * As a budget-conscious user, I want access to professional-grade tools without the high costs of physical DJ equipment.
 
 
-### **Site Aims:**
+## **Site Aims:**
 
 * Provide an interactive, professional-grade virtual DJ experience.
 
@@ -117,72 +117,72 @@ The wireframe for the project was meticulously designed using an Excel sheet. Gi
 ![Initial wireframe](assets/images/Initial%20DJ%20Design.jpg)
 ![Final wirefrrame](assets/images/Final%20DJ%20Design.jpg)
 
-Key Elements of the Wireframe
+**Key Elements of the Wireframe**
 
 The interface comprises two decks and a mixer section, labeled "Deck A," "Deck B," and "Mixer." These sections provide an array of features that enhance the user's DJing experience, including the ability to upload and manage individual audio tracks. Users can create seamless transitions, mix tracks, and apply manual and auto loops. Additional functionality includes tempo, volume, and speed adjustments, frequency filtering, and blending tracks effortlessly. The spinning jog wheels deliver a lifelike DJing experience.
 
-Key Features
+**Key Features**
 
-1. Dual Decks (Deck A and Deck B). Each deck includes:
-        * Pitch Control
-        * FX Controls
-        * Touch Strip
-        * Beats and Tap Timing
-        * Tempo Fader
-        * Jog Wheel
-        * Performance Pads with options for:
-                * Manual Loop
-                * Auto Loop
-                * Speed Adjustments (x0.5, x2)
-                * Samplers
-                * Cues (Cue 1-4)
-        * Control Buttons:
-                * Sync
-                * Cue
-                * Play/Pause
+1. **Dual Decks** (Deck A and Deck B). Each deck includes:
+        -  Pitch Control
+        - FX Controls
+        - Touch Strip
+        - Beats and Tap Timing
+        - Tempo Fader
+        - Jog Wheel
+        - Performance Pads with options for:
+                - Manual Loop
+                - Auto Loop
+                - Speed Adjustments (x0.5, x2)
+                - Samplers
+                - Cues (Cue 1-4)
+        - Control Buttons:
+                -  Sync
+                - Cue
+                - Play/Pause
 
-2. *Mixer Section* The mixer section offers:
-        * Equalizer Controls (Bass, Mid, Treble)
-        * Master Gain Control
-        * High-Pass and Low-Pass Filters
-        * Headphone and Microphone Integration
-        * Recording Functions (Record, Save Mix, Play Mix)
-        * Channel Volume Adjustments
-        * Crossfader for blending audio between decks
-        * Audio Management (Track Selection and Uploading)
+2. **Mixer Section** The mixer section offers:
+        - Equalizer Controls (Bass, Mid, Treble)
+        - Master Gain Control
+        - High-Pass and Low-Pass Filters
+        - Headphone and Microphone Integration
+        - Recording Functions (Record, Save Mix, Play Mix)
+        - Channel Volume Adjustments
+        - Crossfader for blending audio between decks
+        - Audio Management (Track Selection and Uploading)
 
-3. *Waveform Display* A dynamic waveform display provides real-time visual feedback of the tracks being played, aiding precision mixing.
+3. **Waveform Display** A dynamic waveform display provides real-time visual feedback of the tracks being played, aiding precision mixing.
 
-4.*Music and Sampler Display* The music and sampler display enhances the user experience by providing a clear overview of the loaded tracks and sampler content.
+4.**Music and Sampler Display** The music and sampler display enhances the user experience by providing a clear overview of the loaded tracks and sampler content.
 
 In summary, the wireframe demonstrates a comprehensive DJ interface that effectively balances advanced functionality with intuitive design. This ensures users can enjoy an immersive and seamless DJing experience, whether they are beginners or professionals.
 
 
 **Technical Implementation**
 
-*Frontend*
+**Frontend**
 
 The frontend of DEE J PRO is built using HTML, CSS, and JavaScript. A grid-based layout is implemented to organize the various components, ensuring a responsive and intuitive user experience across different devices. Custom CSS animations and transitions are used to enhance the interactivity and visual appeal of the interface. The layout is optimized for larger screens, such as desktops and laptops, as the interface includes intricate controls and features that benefit from ample screen space.
 
-*Audio Handling*
+**Audio Handling**
 
 DEE J PRO leverages the Web Audio API for advanced audio processing, offering users precise control over audio playback, mixing, and effects. The integration of the WaveSurfer.js library provides dynamic and interactive audio waveform visualizations, allowing users to see real-time track progress and make accurate adjustments. This combination enables seamless audio manipulation, including looping, filtering, tempo adjustments, and track synchronization, ensuring a professional-grade DJing experience.
 
-**Key Features of the Implementation**
+## **Key Features of the Implementation**
 
-*Dynamic Audio Controls:*
-                * Supports uploading individual audio tracks to Deck A and Deck B.
-                * Provides features such as pitch adjustments, tempo control, and looping.
+**Dynamic Audio Controls**:
+                - Supports uploading individual audio tracks to Deck A and Deck B.
+                - Provides features such as pitch adjustments, tempo control, and looping.
 
-*Responsive Design:*
-                * Utilizes a grid-based layout for logical compartmentalization of the DJ interface, ensuring intuitive navigation.
-                * Optimized for laptops and desktops, with plans for a simplified mobile-friendly version in the future.
+**Responsive Design**:
+                - Utilizes a grid-based layout for logical compartmentalization of the DJ interface, ensuring intuitive navigation.
+                - Optimized for laptops and desktops, with plans for a simplified mobile-friendly version in the future.
 
-*Interactive Visualizations:*
-                *WaveSurfer.js integration enables real-time waveform rendering, helping users identify beat drops and transitions visually.
+**Interactive Visualizations**:
+                - WaveSurfer.js integration enables real-time waveform rendering, helping users identify beat drops and transitions visually.
 
-*Customizability:*
-                * Users can switch between light and dark themes and customize the colors of Deck A, Deck B, and the Mixer section for a personalized experience.
+**Customizability**:
+                - Users can switch between light and dark themes and customize the colors of Deck A, Deck B, and the Mixer section for a personalized experience.
 
 By combining cutting-edge web technologies with user-centered design principles, DEE J PRO delivers a feature-rich, accessible, and immersive DJing platform for users of all skill levels.
 
@@ -190,36 +190,36 @@ By combining cutting-edge web technologies with user-centered design principles,
 
 Using DEE J PRO is straightforward and designed for users of all skill levels. Follow the steps below to get started:
 
-1. Upload Your Tracks:
+1. **Upload Your Tracks**:
     -  Begin by selecting and uploading audio tracks to "Deck A" and "Deck B" using the "Load Deck" function in the Mixer section. This allows you to prepare two tracks for mixing.
 
-2. Play and Pause Tracks:
+2. **Play and Pause Tracks**:
     - Use the clearly labeled "Play/Pause" buttons on each deck to start or stop playback.
 
-3. Mix and Transition:
+3. **Mix and Transition**:
     - Utilize the crossfader located in the Mixer section to seamlessly transition between Deck A and Deck B. Slide it left or right to control the blend of audio between the two decks.
 
-4. Adjust Audio Settings:
+4. **Adjust Audio Settings**:
     - Fine-tune your mix using the volume sliders, equalizer controls (Bass, Mid, Treble), and master gain settings in the Mixer section.
 
-5. Add Effects and Loops:
+5. **Add Effects and Loops**:
     - Experiment with the performance pads on each deck to create manual or auto loops, adjust track speed (x0.5 or x2), and activate samplers or cue points (Cue 1-4).
     - Use the FX controls and touchstrip to apply effects and modulate parameters in real time.
 
-6. Modify Tempo and Pitch:
+6. **Modify Tempo and Pitch**:
     - Adjust playback tempo using the tempo fader or make pitch adjustments with the pitch nudge controls (+/-) on each deck.
 
-7. Customize Your Interface:
+7. **Customize Your Interface**:
     - Switch between light and dark themes or customize the background colors of Deck A, Deck B, and the Mixer section to suit your preferences.
 
-8. Record and Save Your Mix:
+8.**Record and Save Your Mix**:
     - Use the "Record" button in the Mixer section to capture your live mix. Save your recording to the library or a folder for future playback or sharing.
 
-9. Headphone and Microphone Integration:
+9. **Headphone and Microphone Integration**:
     - Enable the PFL Cue to monitor channels through headphones.
     - Use the microphone controls to switch on the mic, adjust input volume, or record voiceovers as part of your mix.
 
-10. Visualize Your Tracks:
+10. **Visualize Your Tracks**:
     - Follow the real-time waveform display to monitor track progress, identify beat drops, and refine your transitions.
 
 DEE J PRO offers a hands-on DJing experience that simulates professional equipment while maintaining accessibility and affordability. Explore the various buttons, sliders, and pads to unlock your creative potential and enjoy mixing music directly in your browser. 
@@ -232,7 +232,7 @@ For users who prefer a darker theme, the platform includes a dark grey metallic 
 
 Unlike many virtual DJ platforms that heavily rely on a predominantly black interface, DEE J PRO offers the flexibility of a light or dark mode. The metallic red accents remain consistent across themes, ensuring that critical functions and features are easily distinguishable in both modes. This thoughtful approach not only enhances usability but also aligns with the vibrant and dynamic atmosphere of DJing environments, offering users a visually pleasing and intuitive interface that elevates their mixing experience.
 
-Controls and Interface Design:
+**Controls and Interface Design**:
 
 The interface design of DEE J PRO prioritizes functionality and user experience, with deliberate choices made to accommodate the online platform’s constraints and user needs.
 
@@ -287,7 +287,7 @@ The scrath keyframes are not an issue right now as the scratch function has not 
 ### **Main body**
 The site has a consistent layout and colour them going with the metallic white, silver, red, grey.
 
-### *Header Element:*
+### **Header Element**:
 The header is used throughout the site to hold the navigation bar and the site title. For the main dj page the header containts the switch theme buttons for the dj interface and body background. The has been placed in the header intentionally as the DJ has many functionalities of its own already, 
 
 - **Title**: A clear, stylized title for easy recognition.
@@ -314,11 +314,11 @@ The learner hub will be implemented once DEE J PRO is fully functioning.
 ## **Future-Enhancements**
 As per the table below, it was not possible to successfully implement all functions and features due to the time constraints of the project. Therefore, a priority for future enhancements is to fully implement all planned features and ensure they work seamlessly. This will be done as an advanced and continuous project.
 
-*Planned Features to Complete the Virtual DJ:*
+**Planned Features to Complete the Virtual DJ**:
         * Enhanced Visual Waveform Display: Incorporate a more advanced waveform visualizer to help users with precise track alignment and beat matching.
         * Advanced Deck Functionality: Complete all mixer and deck functionalities, including advanced FX controls, customizable filters, and smoother scratch emulation.
 
-*Additional Future Enhancements:*
+**Additional Future Enhancements**:
 
 1. Teaching Hub:
     * Develop an integrated learning center with tutorials, interactive guides, and beginner-to-advanced DJ lessons.
@@ -383,14 +383,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 -   [**Minify - JavaScript and CSS minifier**](https://www.minifier.org/javascript-validator)
 
-### Further Testing
+### **Further Testing**
 
 -  **Virtual DJ  Testing**: The Website was tested on Google Chrome, Internet Explorer and Microsoft Edge.
 -   The website was viewed on a variety of devices such as Desktop and Laptop.
 - **Link Testing**: All internal/external links were tested manually to confirm they redirect to the correct pages without delays.  
 - **User experience**: Friends and family members were asked to review the site and documentation to identify whether there were any bugs and/or user experience issues.
 
-### Accessibility
+## **Accessibility**
 
 - **Responsive Design**: Adapts to different screen sizes.
 - **Keyboard Navigation**: The site is navigable without a mouse.
