@@ -153,7 +153,7 @@ The interface comprises two decks and a mixer section, labeled "Deck A," "Deck B
 
 3. **Waveform Display** A dynamic waveform display provides real-time visual feedback of the tracks being played, aiding precision mixing.
 
-4.**Music and Sampler Display** The music and sampler display enhances the user experience by providing a clear overview of the loaded tracks and sampler content.
+4. **Music and Sampler Display** The music and sampler display enhances the user experience by providing a clear overview of the loaded tracks and sampler content.
 
 In summary, the wireframe demonstrates a comprehensive DJ interface that effectively balances advanced functionality with intuitive design. This ensures users can enjoy an immersive and seamless DJing experience, whether they are beginners or professionals.
 
