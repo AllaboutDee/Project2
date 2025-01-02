@@ -49,16 +49,11 @@ const volumeSliderB = document.getElementById("channelBVolume");
 fileInputA.addEventListener("change", (event) => {
     const file = event.target.files[0];
     if (file) {
-        try {
-            const url = URL.createObjectURL(file);
-            audioDeckA.src = url;
-            audioDeckA.load();
-        } catch (error) {
-            console.error("Error loading audio file:", error);
-        }
+        const url = URL.createObjectURL(file);
+        audioDeckA.src = url;
+        audioDeckA.load();
     }
 });
-
 
 // Play/Pause for Deck A
 let isPlayingA = false;
@@ -111,7 +106,6 @@ style.innerHTML = `
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: spin 2s linear infinite; /* Applying spin animation */
     }
     @keyframes spin {
         from { transform: rotate(0deg); }
@@ -196,7 +190,7 @@ document.getElementById("cue4B").addEventListener("click", () => {
     audioDeckB.currentTime = cuePointsB[3];
 });
 
-// Channel A Volume for Deck A and Deck B and Crossfader
+// Channel A Volumefor Deck A and Deck B and Crossfader
 
 const channelAVolume = document.getElementById("channelAVolume");
 channelAVolume.addEventListener("input", () => {
@@ -278,7 +272,7 @@ let isManualLoopActiveB = false;
 // Variable to store the interval for manual loop checking
 let manualLoopIntervalA = null;
 let manualLoopIntervalB = null;
-autoLoopDurationA
+
 // Manual Loop In for Deck A
 document.getElementById("manualLoopInA").addEventListener("click", () => {
     manualLoopInA = audioDeckA.currentTime; // Store the current time as the In point
